@@ -27,6 +27,7 @@
                             <input class="form-control" name="password" type="password">
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                        <p class="small mt-2 text-black">Non sei registrato?<a href="{{route('register')}}"> Clicca qui!</a></p>
                     </form>
                 </div>
             </div>              

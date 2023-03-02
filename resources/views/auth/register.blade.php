@@ -36,6 +36,8 @@
                             <input class="form-control" name="password_confirmation" type="password">
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg">Registrati</button>
+
+                        <p class="small mt-2 text-black">Sei gia registrato?<a href="{{route('login')}}"> Clicca qui!</a></p>
                     </form>
                 </div>
             </div>              
