@@ -4,6 +4,11 @@
     --secondary:rgb(122, 120, 120);
 }
 
+/* A */
+a{
+    text-decoration: none;
+}
+
 /* NAVBAR */
 
 #mainNavigation a {
@@ -71,7 +76,7 @@ body{
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     overflow: hidden;
     /* margin: 10px; */
-    margin-top: 150px;
+    margin-top: 90px;
     padding: 0;
    
 }
