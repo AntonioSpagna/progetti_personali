@@ -2,6 +2,16 @@
     --main:white;
     --primary:black;
     --secondary:rgb(122, 120, 120);
+    /* --fontP: 'Raleway', sans-serif;
+    --fontH: 'Ubuntu', sans-serif; */
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+p, label, button, textarea, input, a{
+ font-family: 'Raleway', sans-serif;
 }
 
 /* A */
@@ -16,7 +26,7 @@ a{
     font-size:14px;
     text-transform:uppercase;
     letter-spacing:2px;
-    text-shadow:1px 1px 2px rgba(0,0,0,0.4)
+    text-shadow:1px 1px 2px rgba(0,0,0,0.4);
 }
 
 .dropdown-menu {
@@ -44,7 +54,7 @@ a.dropdown-item:hover {
 }
 
 #mainNavigation {
-    position:fixed;
+    /* position:fixed; */
     top:0;
     left:0;
     width:100%;
@@ -59,7 +69,7 @@ a.dropdown-item:hover {
 }
 
 .logo{
-    width: 4%;
+    width: 3%;
     
 }
 
@@ -76,7 +86,7 @@ body{
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     overflow: hidden;
     /* margin: 10px; */
-    margin-top: 90px;
+    margin-top: 25px;
     padding: 0;
    
 }

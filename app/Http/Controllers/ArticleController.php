@@ -11,6 +11,11 @@ class ArticleController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index' , 'show');
+    }
+
     public function index()
     {
         //
@@ -33,7 +38,7 @@ class ArticleController extends Controller
             'title'=>'required|min:5|unique:articles',
             'subtitle'=>'required|min:5|unique:articles',
             'body'=>'required|min:20|unique:articles',
-            'img'=>'required|unique:articles',
+            'img'=>'unique:articles',
             'category'=>'required',
         ]);
 
