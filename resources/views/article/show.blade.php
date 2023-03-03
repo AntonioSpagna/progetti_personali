@@ -25,7 +25,7 @@
                               <h5 class="card-title">{{$article->title}}</h5>
                               <h5 class="card-title">{{$article->subtitle}}</h5>
                               <p class="text-title">{{$article->category->name}}</p>
-                                                            
+                              <p>{{$article->body}}</p>                             
                             </div>
                             <div>
                                 Redatto il: {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}
@@ -34,7 +34,7 @@
                           </div>
                         </div>
                     </div>
-                    <p>{{$article->body}}</p>
+                    
                     {{-- <div class="card">
                         <img src="{{Storage::url($article->img)}}" alt="">
                         <div class="card-details">
