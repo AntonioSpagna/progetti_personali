@@ -7,7 +7,7 @@
     <div class="container-fluid p-5 text-center text-white">
         <div class="row justify-content-center">
             <h1 class="display-1 text-dark">
-                Aulab Post
+                Tutti gli articoli
             </h1>
         </div>
     </div>
@@ -25,7 +25,7 @@
                         <div>
                             Redatto il: {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}
                         </div>
-                        <button type="submit" class="card-button" href="{{route('article.show', compact('article'))}}">Leggi</button>
+                        <a type="submit" class="card-button btn" href="{{route('article.show', compact('article'))}}">Leggi</a>
                       </div>
                 </div>
             @endforeach
