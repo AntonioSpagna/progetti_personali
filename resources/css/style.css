@@ -22,7 +22,7 @@ p, label, button, textarea, input, a{
 /* A */
 a{
     text-decoration: none;
-    }
+ }
 
 .color-hv:hover{
     color: chartreuse !important;
@@ -91,7 +91,7 @@ body{
 /* FORM REGISTRATI */
 
 .card {
-    /* width: 250px; */
+    width: 450px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
