@@ -9,11 +9,11 @@
     </div>
     @endif
 
-    <div class="container-fluid my-5  text-center text-white">
+    <div class="container-fluid text-center text-white">
         <div class="row justify-content-center">
             <div class="card">
                 <div class="card-header">
-                    <div class="text-header">Login</div>
+                    <h1 class="text-header">Login</h1>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{route('login')}}">
@@ -27,6 +27,7 @@
                             <input class="form-control" name="password" type="password">
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                        <p class="small mt-3 fw-bold text-black">Non sei registrato?<a href="{{route('register')}}"> Clicca qui!</a></p>
                     </form>
                 </div>
             </div>              

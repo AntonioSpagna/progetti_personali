@@ -9,7 +9,7 @@
 </head>
 <body>
     <x-navbar/>
-    <div class="min-vh-100 my-5">
+    <div class=" my-5">
         {{$slot}}
     </div>
 </body>
