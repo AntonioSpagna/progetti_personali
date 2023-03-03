@@ -33,7 +33,7 @@
           <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Book Hotel</a>
+          <a class="nav-link" href="{{route('article.index')}}">Articoli</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Destinations</a>
@@ -49,6 +49,9 @@
           </ul>
         </li>
         @else
+        <li class="nav-item me-3">
+          <a class="nav-link btn text-white btn-dark px-2" href="{{route('article.create')}}">Inserisci articoli</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link fw-bolder dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Benvenuto {{Auth::user()->name}}</a>
           <ul class="dropdown-menu">
@@ -61,9 +64,7 @@
           </ul>
         </li>
         @endguest
-        <li class="nav-item">
-          <a class="nav-link btn text-white btn-dark" href="{{route('article.create')}}">Inserisci articoli</a>
-        </li>
+        
       </ul>
     </div>
   </div>
