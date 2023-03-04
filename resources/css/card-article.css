@@ -68,7 +68,11 @@
     text-decoration: none;
     list-style: none;
     color: black;
-    
+    height: fit-content;
+
+}
+.row-welcome{
+    height: fit-content;
 }
 
 .zoom{
@@ -88,7 +92,10 @@
 .arrow:hover {
     transform: translateX(20px); /* Spostare la freccia di 20 pixel verso destra */
 }
-
+ .img-welcome {
+    max-width: 100%;
+    height: auto;
+ }
 
 
 @media only screen and (max-width: 767px) {
@@ -103,3 +110,5 @@
     
     
 }
+
+

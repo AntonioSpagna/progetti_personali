@@ -16,8 +16,11 @@ h1{
 
 p, label, button, textarea, input, a{
  font-family: 'Raleway', sans-serif;
+ 
 }
-
+p{
+    font-size: 20px;
+}
 
 /* A */
 a{
@@ -25,7 +28,7 @@ a{
  }
 
 .color-hv:hover{
-    color: chartreuse !important;
+    color: rgb(63, 132, 244) !important;
 }
 
 

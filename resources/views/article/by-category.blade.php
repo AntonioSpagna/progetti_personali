@@ -6,7 +6,7 @@
             </h1>
         </div>
     </div>
-    <div class="container-fluid p-5 text-center text-white">
+    <div class="container-fluid p-5 text-center text-dark">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
                 <div class="col-12 col-md-8 col-lg-6">
