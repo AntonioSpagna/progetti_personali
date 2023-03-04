@@ -15,7 +15,7 @@
                         <div class="card-details">
                           <p class="text-title">{{$article->title}}</p>
                           <p class="text-title">{{$article->subtitle}}</p>
-                          <p class="text-title">{{$article->category->name}}</p>                          
+                          <a class="text-dark mt-5 color-hv" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">{{$article->category->name}}</a>                          
                         </div>
                         <div>
                             Redatto il: {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}

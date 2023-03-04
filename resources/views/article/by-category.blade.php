@@ -18,7 +18,7 @@
                           <p class="text-title">{{$article->category->name}}</p>                          
                         </div>
                         <div>
-                            Redatto il: {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}
+                            Redatto il: {{$article->created_at->format('d/m/Y')}} da <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}">{{$article->user->name}}</a>
                         </div>
                         <a type="submit" class="card-button btn" href="{{route('article.show', compact('article'))}}">Leggi</a>
                       </div>

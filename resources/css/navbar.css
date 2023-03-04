@@ -1,0 +1,20 @@
+.bg-navbar{
+    background-image: linear-gradient(rgba(255,255,255, 1), rgba(247, 131, 131, 0.174)), url(../../public/storage/img/PALAZZO-MINCUZZI-BARI.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 500px;
+}
+
+.aulab-post{
+    font-family: 'Kaisei Opti', serif;
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+.logo{
+    width: 100px;
+    padding-left: 10px;
+    
+}
+

@@ -12,5 +12,6 @@
     <div class=" my-5">
         {{$slot}}
     </div>
+    <script src="https://kit.fontawesome.com/58c29b2b44.js" crossorigin="anonymous"></script>
 </body>
 </html>
