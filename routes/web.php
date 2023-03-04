@@ -21,3 +21,7 @@ Route::get('/article/create',[ArticleController::class,'create'])->name('article
 Route::post('/article/store',[ArticleController::class,'store'])->name('article.store');
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+// rotta per categoria di articoli
+Route::get('/article/category/{category}' , [ArticleController::class , 'byCategory'] )->name('article.byCategory'); 
+//rotta per scrittore di articoli
+Route::get('/article/user/{user}' , [ArticleController::class , 'byUser'] )->name('article.byUser'); 

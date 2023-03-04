@@ -10,14 +10,25 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Ubuntu', sans-serif;
 }
 
+h1{
+    font-size: 50px;
+}
+
 p, label, button, textarea, input, a{
  font-family: 'Raleway', sans-serif;
 }
 
+
 /* A */
 a{
     text-decoration: none;
+ }
+
+.color-hv:hover{
+    color: chartreuse !important;
 }
+
+
 
 /* NAVBAR */
 
@@ -38,7 +49,7 @@ a.dropdown-toggle {
 }
 
 a.dropdown-item:hover {
-    color:#03727d !important
+    color:#000000 !important
 }
 
 .nav-item a{
@@ -80,7 +91,7 @@ body{
 /* FORM REGISTRATI */
 
 .card {
-    width: 350px;
+    width: 450px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);

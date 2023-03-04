@@ -26,7 +26,7 @@
                             <label class="form-label">Password:</label>
                             <input class="form-control" name="password" type="password">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                        <button type="submit" class="btn btn-primary  btn-lg">Login</button>
                         <p class="small mt-3 fw-bold text-black">Non sei registrato?<a href="{{route('register')}}"> Clicca qui!</a></p>
                     </form>
                 </div>
