@@ -114,4 +114,19 @@
     
 }
 
+.imgvclsx{
+  object-fit: cover;  
+  height: 100%;
+}
 
+.rowclsx{
+    height: 380px;
+}
+
+
+/* Card Category */
+.card-img-top {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    }

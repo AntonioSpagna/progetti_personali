@@ -1,17 +1,17 @@
 <x-layout>
     <div class="container-fluid p-5 text-center text-black">
-        <div class="row justify-content-center">
+        <div class="row  justify-content-center">
             <h1 class="display-1 text-dark">
                 Utente {{$user->name}}
             </h1>
         </div>
     </div>
     <div class="container-fluid p-5 text-center text-black">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center ">
             @foreach ($articles as $article)
-                <div class="col-12 col-md-8 col-lg-6">
+                <div class="col-12 col-md-8 col-lg-6 d-flex justify-content-center">
                     <div class="card">
-                        <img src="{{Storage::url($article->img)}}" alt="">
+                        <img src="{{Storage::url($article->img)}}" alt="" class="card-img-top">
                         <div class="card-details">
                           <p class="text-title">{{$article->title}}</p>
                           <p class="text-title">{{$article->subtitle}}</p>
