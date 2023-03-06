@@ -68,8 +68,7 @@
                     {{-- colonna destra --}}
                     <div class="col-6 p-0 bordo-dx">
                         <img src="{{Storage::url($article->img)}}" class="w-100 h-100 " alt="">
-                    </div>
-                    
+                    </div>    
                 </div> 
             </div>
         </div>
