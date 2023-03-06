@@ -9,6 +9,7 @@
             
         </div>
     </div>
+   
     {{-- @foreach ($articles as $article)
     @if ($article->id%2==0)
     <div id="card-a" class="container zoom my-5 bordo  w-50">

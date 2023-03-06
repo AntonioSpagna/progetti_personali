@@ -20,11 +20,7 @@
 
 
 
-    <div class="scroll-to-top">
-        <a href="#" class="scroll-link">
-          <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
+   
 
 
     <div class="container-fluid p-5 text-center text-white">

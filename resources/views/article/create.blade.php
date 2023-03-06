@@ -18,6 +18,8 @@
         {{session('message')}}
     </div>
     @endif
+
+    
     {{-- sezione inserisci articolo --}}
     <div class="container create-article">
         <div class="row justify-content-center">

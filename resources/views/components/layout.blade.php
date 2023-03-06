@@ -9,6 +9,11 @@
 </head>
 <body>
     <x-navbar/>
+    <div class="scroll-to-top">
+        <a href="#" class="scroll-link">
+          <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
     <div class=" my-5 bg-white">
         {{$slot}}
     </div>
