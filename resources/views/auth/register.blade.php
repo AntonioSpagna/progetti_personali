@@ -14,7 +14,7 @@
         <div class="row justify-content-center">
             <div class="card">
                 <div class="card-header">
-                    <div class="text-header">Register</div>
+                    <div class="text-header">Registrati</div>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{route('register')}}">
