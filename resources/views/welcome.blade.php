@@ -92,8 +92,8 @@
                         </div>
                         {{-- colonna destra --}}
                         <div class="col-6 ps-5 ">
-                            <div class="pt-3">
-                                <a class="text-dark mt-5 color-hv" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/ {{$article->category->name}}</a>
+                            <div class="pt-3" id="iconContainer">
+                                <a class="text-dark mt-5 color-hv " id="iconCategory" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/  {{$article->category->name}}   <i class="{{$article->category->icon}} ps-1 fs-4"></i></a>
                             </div>
                             <h2 class="pt-5">{{$article->title}}</h2>
                             <h6 class="pb-3">{{$article->subtitle}}</h6>
@@ -119,7 +119,7 @@
                         {{-- colonna sinitra --}}
                         <div class="col-6 ps-5 ">
                             <div class="pt-3 ">
-                                <a class="text-dark mt-5 color-hv " href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/ {{$article->category->name}}</a>
+                                <a class="text-dark mt-5 color-hv " href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/ {{$article->category->name}}<i class="{{$article->category->icon}} ps-1 fs-4"></i></a>
                             </div>
                             <h2 class="pt-5">{{$article->title}}</h2>
                             <h6 class="pb-3">{{$article->subtitle}}</h6>

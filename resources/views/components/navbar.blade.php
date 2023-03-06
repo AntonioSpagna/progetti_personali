@@ -37,6 +37,16 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('article.index')}}">Articoli</a>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              @foreach ($categories as $category)
+                  <li><a class="dropdown-item" href="{{route('article.byCategory' , ['category'=>$category->id])}}">{{$category->name}} <i class="{{$category->icon}} fs-5"></i></a></li>
+              @endforeach  
+            </ul>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Destinations</a>
           </li>

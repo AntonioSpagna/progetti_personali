@@ -1,0 +1,38 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Category;
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+class addiconseeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $icons=
+        [
+            
+            "fa-solid fa-futbol",
+            "fa-solid fa-car",
+            "fa-solid fa-vest",
+            "fa-solid fa-landmark",
+            "fa-solid fa-euro-sign",
+            "fa-solid fa-film",
+            "fa-solid fa-kitchen-set",
+            "fa-solid fa-leaf",
+            "fa-solid fa-microchip",
+            "fa-solid fa-cloud-sun"
+        ];
+        $i=0;
+        // DB::table('categories')->insert()
+        foreach(Category::all() as $category){
+            $category->icon = $icons[$i];
+            $category->save();
+            $i++;
+        }
+    }
+}

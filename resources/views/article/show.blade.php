@@ -46,7 +46,7 @@
                         Redatto il: {{$article->created_at->format('d/m/Y')}} da  <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}">{{$article->user->name}}</a>
                     </div>
                     <div class="mb-3 mt-2">                             
-                        <a class="text-dark color-hv" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">{{$article->category->name}}</a>
+                        <a class="text-dark color-hv" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">{{$article->category->name}} <i class="{{$article->category->icon}} ps-1 fs-5"></i></a>
                     </div>
                     <a class="card-button btn" href="{{route('article.index')}}">Torna indietro</a>
                 </div>
