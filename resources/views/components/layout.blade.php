@@ -9,7 +9,7 @@
 </head>
 <body>
     <x-navbar/>
-    <div class=" my-5">
+    <div class=" my-5 bg-white">
         {{$slot}}
     </div>
     <script src="https://kit.fontawesome.com/58c29b2b44.js" crossorigin="anonymous"></script>

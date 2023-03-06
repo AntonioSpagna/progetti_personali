@@ -20,7 +20,11 @@
 
 
 
-
+    <div class="scroll-to-top">
+        <a href="#" class="scroll-link">
+          <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
 
 
     <div class="container-fluid p-5 text-center text-white">
@@ -35,8 +39,8 @@
         <div class="row justify-content-center">
             
             <div class="col-12 justify-content-center d-flex align-items-center flex-column">   
-                <div class="text-center">
-                    <img src="{{Storage::url($article->img)}}" class="img-fluid rounded-start" alt="...">
+                <div class=" col-8 text-center">
+                    <img src="{{Storage::url($article->img)}}" class="img-show rounded-start" alt="...">
                 </div>
                 <div class="col-8 ">
                     <div class="mt-5">
@@ -53,6 +57,6 @@
             </div>
         </div>
     </div>
-
+    
 
 </x-layout>

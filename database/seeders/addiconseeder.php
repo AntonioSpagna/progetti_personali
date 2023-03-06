@@ -6,7 +6,7 @@ use App\Models\Category;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class addiconseeder extends Seeder
+class AddIconSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -1,7 +1,8 @@
 :root{
     --main:white;
     --primary:black;
-    --secondary:rgb(122, 120, 120);
+    --secondary:rgb(6, 57, 108);
+    --third: rgb(117, 117, 117);
     
 }
 
@@ -13,6 +14,9 @@ h1{
     font-size: 55px;
     font-weight: bolder;
 }
+h2, h3, h4, h5, h6{
+    color: var(--secondary);
+}
 
 p, label, button, textarea, input, a, div{
  font-family: 'Raleway', sans-serif;
@@ -20,6 +24,7 @@ p, label, button, textarea, input, a, div{
 }
 p{
     font-size: 20px;
+    color: var(--third);
 }
 
 /* A */
@@ -35,7 +40,7 @@ a{
 
 /* NAVBAR */
 
-#mainNavigation a {
+/* #mainNavigation a {
     font-family: 'Cabin', sans-serif;
     font-size:14px;
     text-transform:uppercase;
@@ -43,8 +48,13 @@ a{
     text-shadow:1px 1px 2px rgba(0,0,0,0.4);
 }
 
+.bg-navbar{
+    background-color: var(--secondary);
+    color: var(--main);
+}
+
 .dropdown-menu {
-    background: var(--main);
+    background: var(--secondary);
 }
 
 a.dropdown-toggle {
@@ -67,9 +77,9 @@ a.dropdown-item:hover {
     min-width:12vw;
 }
 
-#mainNavigation {
+#mainNavigation { */
     /* position:fixed; */
-    top:0;
+    /* top:0;
     left:0;
     width:100%;
     z-index:123;
@@ -78,15 +88,12 @@ a.dropdown-item:hover {
 
 #navbarNavDropdown.collapsing .navbar-nav,
 #navbarNavDropdown.show .navbar-nav{
-    background:rgb(122, 120, 120);
+    background:var(--secondary);
     padding:12px;
-}
+} */
 
 
 
-body{
-    background-color: rgb(218, 218, 218);
-} 
 
 /* FORM REGISTRATI */
 
@@ -143,11 +150,11 @@ body{
 
 .btn {
     padding: 12px 24px;
-    margin-left: 13px;
+    margin-left: 0;
     font-size: 16px;
     border: none;
     border-radius: 4px;
-    background-color: #333;
+    background-color:var(--secondary);
     color: #fff;
     text-transform: uppercase;
     transition: background-color 0.2s ease-in-out;
@@ -155,6 +162,35 @@ body{
 }
 
 .btn:hover {
-    background-color: #ccc;
-    color: #333;
+    background-color: var(--third);
+    color: var(--secondary);
 }
+
+
+.img-show {
+    width:60%;
+    
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: -40px; 
+    right: 20px;
+    z-index: 9999;
+    transition: bottom 0.3s;  
+  }
+  
+  .scroll-link {
+    display: block;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .scroll-link:hover {
+    background-color: #555;
+  }
