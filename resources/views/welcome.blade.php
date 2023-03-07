@@ -6,7 +6,8 @@
     @endif
     <div class="container-fluid text-center text-dark">
         <div class="row justify-content-center">
-            
+            <h1 class="pb-3">The Aulab Post</h1>
+            <h3>I nostri articoli più recenti</h3>
         </div>
     </div>
    

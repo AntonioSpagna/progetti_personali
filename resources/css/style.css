@@ -11,8 +11,8 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1{
-    font-size: 55px;
-    font-weight: bolder;
+    font-size: 50px;
+    font-weight:900;
 }
 h2, h3, h4, h5, h6{
     color: var(--secondary);
@@ -168,7 +168,7 @@ a.dropdown-item:hover {
 
 
 .img-show {
-    width:60%;
+    width:70%;
     
 }
 
@@ -193,4 +193,10 @@ a.dropdown-item:hover {
   
   .scroll-link:hover {
     background-color: #555;
+  }
+
+  @media screen and (max-width: 978px){
+    .img-show{
+        width: 100%;
+    }
   }

@@ -35,7 +35,7 @@
         <div class="row justify-content-center">
             
             <div class="col-12 justify-content-center d-flex align-items-center flex-column">   
-                <div class=" col-8 text-center">
+                <div class=" col-12 col-md-10 col-lg-10 text-center">
                     <img src="{{Storage::url($article->img)}}" class="img-show rounded-start" alt="...">
                 </div>
                 <div class="col-8 ">
@@ -46,8 +46,11 @@
                         Redatto il: {{$article->created_at->format('d/m/Y')}} da  <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}">{{$article->user->name}}</a>
                     </div>
                     <div class="mb-3 mt-2">                             
-                        <a class="text-dark color-hv" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">{{$article->category->name}} <i class="{{$article->category->icon}} ps-1 fs-5"></i></a>
+                        <a class="text-dark color-hv" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/ {{$article->category->name}} <i class="{{$article->category->icon}} ps-1 fs-5"></i></a>
                     </div>
+                  
+                </div>
+                <div class="d-flex justify-center pt-5">
                     <a class="card-button btn" href="{{route('article.index')}}">Torna indietro</a>
                 </div>
             </div>
