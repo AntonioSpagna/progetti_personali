@@ -51,6 +51,10 @@
                   
                 </div>
                 <div class="d-flex justify-center pt-5">
+                    @if (Auth::user() && Auth::user()->is_revisor)
+                        <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="card-button btn">Accetta Articolo</a>
+                        <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="card-button btn">Rifiuta Articolo</a>
+                    @endif
                     <a class="card-button btn" href="{{route('article.index')}}">Torna indietro</a>
                 </div>
             </div>

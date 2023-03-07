@@ -264,6 +264,11 @@
               <a class="nav-link px-3" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
             </li> 
           @endif
+          @if (Auth::user()->is_revisor)
+            <li class="nav-item">
+              <a class="nav-link px-3" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
+            </li> 
+          @endif
           <li class="nav-item">
             <a class="nav-link px-3" href="{{route('careers')}}">Lavora con noi</a>
           </li>   
