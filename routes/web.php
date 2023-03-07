@@ -19,8 +19,7 @@ use App\Http\Controllers\RevisorController;
 
 Route::get('/', [PublicController::class,'home'])->name('homepage');
 
-Route::get('/article/create',[ArticleController::class,'create'])->name('article.create');
-Route::post('/article/store',[ArticleController::class,'store'])->name('article.store');
+
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 // rotta per categoria di articoli
@@ -46,5 +45,9 @@ Route::middleware('revisor')->group(function(){
     Route::get('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
 
 });
+//Rotta writer
+Route::middleware('writer')->group(function(){
+    Route::get('/article/create',[ArticleController::class,'create'])->name('article.create');
+    Route::post('/article/store',[ArticleController::class,'store'])->name('article.store');
 
-
+});

@@ -70,7 +70,7 @@ class ArticleController extends Controller
             'category_id'=>$request->category,
             'user_id'=>Auth::user()->id,
         ]);
-        return redirect(route('homepage'))->with('message','Il tuo articolo è stato creato');
+        return redirect(route('homepage'))->with('message','Il tuo articolo è stato creato ed è in fase di revisione');
     }
 
     /**
