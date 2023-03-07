@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,11 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/{user}/set-revisor',[AdminController::class,'setRevisor'])->name('admin.setRevisor');
     Route::get('/admin/{user}/set-writer',[AdminController::class,'setWriter'])->name('admin.setWriter');
 });
+
+//Rotta revisor
+Route::middleware('revisor')->group(function(){
+    Route::get('/revisor/dashboard', [RevisorController::class, 'dashboard'])->name('revisor.dashboard');
+
+});
+
+
