@@ -258,11 +258,15 @@
               <li><a class="dropdown-item link-drop" href="{{route('login')}}">Login</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link px-3" href="{{route('careers')}}">Invia la tua email</a>
-          </li>   
           @else
-          
+          @if (Auth::user()->is_admin)
+            <li class="nav-item">
+              <a class="nav-link px-3" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
+            </li> 
+          @endif
+          <li class="nav-item">
+            <a class="nav-link px-3" href="{{route('careers')}}">Lavora con noi</a>
+          </li>   
           <li class="nav-item dropdown px-3">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto {{Auth::user()->name}}
