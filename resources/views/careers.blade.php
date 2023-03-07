@@ -27,7 +27,7 @@
     <div class="container create-article">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
-                <form method="" action="">
+                <form method="POST" action="{{route('careers.submit')}}">
                     @csrf
                         {{-- input ruoli --}}
                         <label class="fw-semibold">Per quale ruolo ti stai candidando?</label>

@@ -259,6 +259,9 @@
             </ul>
           </li>
           @else
+          <li class="nav-item">
+            <a class="nav-link px-3" href="{{route('careers')}}">Invia la tua email</a>
+          </li>   
           <li class="nav-item dropdown px-3">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto {{Auth::user()->name}}
@@ -269,7 +272,8 @@
                 @csrf
               </form>             
             </ul>
-          </li>          
+          </li> 
+                
           <li class="nav-item px-3">
             <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
           </li>
