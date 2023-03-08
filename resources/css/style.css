@@ -3,6 +3,7 @@
     --primary:black;
     --secondary:rgb(6, 57, 108);
     --third: rgb(117, 117, 117);
+    --light-gray:rgb(58, 58, 58);
     
 }
 
@@ -24,7 +25,7 @@ p, label, button, textarea, input, a, div{
 }
 p{
     font-size: 20px;
-    color: var(--third);
+    color: var(--light-gray);
 }
 
 /* A */
@@ -181,11 +182,24 @@ background-color: rgb(255, 204, 0);
     font-size: 50px;
     font-weight: 700;
 }
-.span-data{
-    display: inline-block;
-   
+
+.border-show{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
+
+@media screen and (max-width: 767px){
+    .story__toolbar{
+        position: relative;
+        border-right: none;
+        flex-wrap:wrap;
+        gap: 4px;
+    }
+    }
+
+
+/* bottone torna su */
 .scroll-to-top {
     position: fixed;
     bottom: -40px; 

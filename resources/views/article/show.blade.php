@@ -69,17 +69,28 @@
             <h3 class=" text-dark p-0"><i>"{{$article->subtitle}}"</i></h3>
         </div>
         {{-- row data --}}
-        <div class="row border-top border-bottom span-data">            
-            <span class="me-5">
-               <i class="fa-solid fa-calendar-days">{{$article->created_at->format('d/m/Y')}} </i> 
-            </span>
-            <span class="me-5">
-               <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}"><i class="fa-solid fa-pen-nib"></i>{{$article->user->name}}</a> 
-            </span>
-            <span class="ms-5">
-                <i class="fa-solid fa-hourglass-half">1 minuto di lettura</i>
-            </span>
-                         
+        <div class="row mt-3  border-show  ">   
+            <div class="col-12 col-md-12  d-flex justify-content-between align-items-center story__toolbar">
+               <p>
+                <i class="fa-solid fa-calendar-days pe-1 pt-3"></i> 
+                {{$article->created_at->format('d/m/Y')}}
+               </p>
+                 
+                 <span  class="lettura">
+                    <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}"><i class="fa-solid fa-pen-nib pe-1 fs-5"></i>{{$article->user->name}}</a> 
+                 </span>
+                    <p>
+                        <i class="fa-solid pe-1 pt-3 fa-hourglass-half"></i>
+                        1 minuto di lettura
+                    </p>
+            </div>                      
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-10">
+                <div class="mt-5 text-center">
+                    <p>{{$article->body}}</p> 
+                </div>  
+            </div>
         </div>
     </div>
 
