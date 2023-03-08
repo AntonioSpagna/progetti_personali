@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
-            <h1>Bentornato Revisore</h1>
+            <h1 class="text-center">Bentornato Revisore</h1>
         </div>
     </div> 
     @if ($errors->any())

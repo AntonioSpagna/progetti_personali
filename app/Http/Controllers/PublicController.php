@@ -16,7 +16,7 @@ class PublicController extends Controller
     }
     
     public function __construct(){
-        $this->middleware('auth');
+        $this->middleware('auth')->except('home');
     }
     public function careers(){
         return view('careers');

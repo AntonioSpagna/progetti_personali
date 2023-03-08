@@ -4,25 +4,9 @@
         {{session('message')}}
     </div>
     @endif
-
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
+    
+  
     <div class="container-fluid p-5 text-center text-white">
         <div class="row justify-content-center">
             <h1 class=" text-dark">
@@ -48,18 +32,25 @@
                     <div class="mb-3 mt-2">                             
                         <a class="text-dark color-hv" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/ {{$article->category->name}} <i class="{{$article->category->icon}} ps-1 fs-5"></i></a>
                     </div>
-                  
+                    
                 </div>
-                <div class=" pt-5">
+                <div class="pt-5 text-center">
                     @if (Auth::user() && Auth::user()->is_revisor)
-                        <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="card-button btn-accept">Accetta Articolo</a>
-                        <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="card-button btn-discard">Rifiuta Articolo</a>
-                    @endif
-                    <a class="card-button btn" href="{{route('article.index')}}">Torna indietro</a>
+                    @if ($article->is_accepted == NULL)
+                    <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="card-button btn-accept">Accetta Articolo</a>
+                    <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="card-button btn-discard">Rifiuta Articolo</a>
+                    @else 
+                  
+                        <a href="{{route('revisor.undoArticle', compact('article'))}}" class="card-button btn-discard">Manda in revisione</a>
+                        @endif
+                        
+                        @endif
+                        <a class="card-button btn-return mt-2 mt-md-0" href="{{route('article.index')}}">Torna indietro</a>
+                    
                 </div>
             </div>
         </div>
     </div>
     
-
+    
 </x-layout>

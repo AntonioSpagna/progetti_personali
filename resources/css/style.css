@@ -37,64 +37,6 @@ a{
 }
 
 
-
-/* NAVBAR */
-
-/* #mainNavigation a {
-    font-family: 'Cabin', sans-serif;
-    font-size:14px;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    text-shadow:1px 1px 2px rgba(0,0,0,0.4);
-}
-
-.bg-navbar{
-    background-color: var(--secondary);
-    color: var(--main);
-}
-
-.dropdown-menu {
-    background: var(--secondary);
-}
-
-a.dropdown-toggle {
-    color: black !important
-}
-
-a.dropdown-item:hover {
-    color:#000000 !important
-}
-
-.nav-item a{
-    color: black;
-}
-
-.nav-item a:hover {
-    color:#fff
-}
-
-.nav-item{
-    min-width:12vw;
-}
-
-#mainNavigation { */
-    /* position:fixed; */
-    /* top:0;
-    left:0;
-    width:100%;
-    z-index:123;
-    padding-bottom:20px;
-}
-
-#navbarNavDropdown.collapsing .navbar-nav,
-#navbarNavDropdown.show .navbar-nav{
-    background:var(--secondary);
-    padding:12px;
-} */
-
-
-
-
 /* FORM REGISTRATI */
 
 .card {
@@ -187,6 +129,7 @@ a.dropdown-item:hover {
 
 /* BTN Rifiuta articolo */
 .btn-discard{
+    display: inline-block;
     padding: 14px 24px;
     margin-left: 0;
     font-size: 16px;
@@ -196,12 +139,37 @@ a.dropdown-item:hover {
     color: #fff;
     text-transform: uppercase;
     transition: background-color 0.2s ease-in-out;
-    cursor: pointer
+    cursor: pointer;
+    width: 214px;
+    text-align: center;
+   
 }
 
 .btn-discard:hover{
     background-color:rgb(209, 3, 3);
     color: black;
+}
+
+.btn-return{
+    display: inline-block;
+    padding: 14px 24px;
+    width: 214px;
+    margin-left: 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color:rgb(230, 184, 0);
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.btn-return:hover{
+color: black;
+background-color: rgb(255, 204, 0);
 }
 
 
@@ -232,6 +200,24 @@ a.dropdown-item:hover {
   .scroll-link:hover {
     background-color: #555;
   }
+
+/* PAGINA CAREERS */
+
+.card-careers{
+    border: hidden 2px ;
+    box-shadow: 3px 4px 13px 3px #939393dc;
+    border-radius: 20px;
+}
+
+.margin-titolo{
+    margin: 100px 0px 100px 0px;
+}
+
+.h1-creers{
+    font-size: 50px;
+    font-weight: 1300;
+
+}
 
   @media screen and (max-width: 978px){
     .img-show{
