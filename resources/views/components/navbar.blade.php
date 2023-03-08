@@ -157,7 +157,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               @foreach ($categories as $category)
-                  <li><a class="dropdown-item" href="{{route('article.byCategory' , ['category'=>$category->id])}}">{{$category->name}} <i class="{{$category->icon}} fs-5"></i></a></li>
+                  <li><a class="dropdown-item" href="{{route('article.byCategory' , ['category'=>$category->id])}}"><i class="{{$category->icon}} fs-5 pe-2"></i> {{$category->name}} </a></li>
               @endforeach  
             </ul>
           </li>
@@ -202,7 +202,7 @@
             <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
           </li>
         </ul>
-        <a class="btn ms-2 button_Nav" href="{{route('article.create')}}">Crea articolo</a>
+        <a class="btn ms-2 button_Nav mb-3 mb-lg-0" href="{{route('article.create')}}">Crea articolo</a>
         @endguest
       </div>
     </div>

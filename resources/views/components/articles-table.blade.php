@@ -15,11 +15,11 @@
             <td>{{$article->title}}</td>
             <td>{{$article->subtitle}}</td>
             <td>{{$article->user->name}}</td>
-            <td>
+            <td class="d-flex justify-content-around">
                 @if(is_null($article->is_accepted))
-                <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-dark">Leggi l'articolo</a>
+                <a href="{{route('article.show', compact('article'))}}" class="btn">Leggi l'articolo</a>
                 @else 
-                <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn btn-info text-dark">Riporta in revisione</a>
+                <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn">Riporta in revisione</a>
                 @endif
                 
             </td>

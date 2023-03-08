@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid my-5">
+    <div class="container my-5">
         <div class="row justify-content-center">
             <h1>Bentornato Amministratore</h1>
         </div>

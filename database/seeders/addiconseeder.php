@@ -20,7 +20,7 @@ class AddIconSeeder extends Seeder
             "fa-solid fa-car",
             "fa-solid fa-vest",
             "fa-solid fa-landmark",
-            "fa-solid fa-euro-sign",
+            "fa-solid fa-money-check-dollar",
             "fa-solid fa-film",
             "fa-solid fa-kitchen-set",
             "fa-solid fa-leaf",

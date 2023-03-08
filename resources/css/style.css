@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1{
-    font-size: 50px;
+    font-size: 40px;
     font-weight:900;
 }
 h2, h3, h4, h5, h6{
@@ -166,6 +166,44 @@ a.dropdown-item:hover {
     color: var(--secondary);
 }
 
+/* BTN Accetta articolo */
+.btn-accept{
+    padding: 14px 24px;
+    margin-left: 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color:green;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer
+}
+
+.btn-accept:hover{
+    background-color: rgb(29, 211, 29);
+    color: black;
+}
+
+/* BTN Rifiuta articolo */
+.btn-discard{
+    padding: 14px 24px;
+    margin-left: 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color:rgb(168, 24, 24);
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer
+}
+
+.btn-discard:hover{
+    background-color:rgb(209, 3, 3);
+    color: black;
+}
+
 
 .img-show {
     width:70%;
@@ -198,5 +236,28 @@ a.dropdown-item:hover {
   @media screen and (max-width: 978px){
     .img-show{
         width: 100%;
+    }
+  }
+
+  /* Dimensione tabella */
+  .fixed-width{
+    width: 25%;
+  }
+
+  /* Ridimensionamento del bottone */
+  @media only screen and (max-width: 993px) {
+    #mybottone {
+      display: none;
+    }
+    #myicon {
+      display: inline-block;
+    }
+  }
+  @media only screen and (min-width: 994px) {
+    #mybottone {
+      display: inline-block;
+    }
+    #myicon {
+      display: none;
     }
   }

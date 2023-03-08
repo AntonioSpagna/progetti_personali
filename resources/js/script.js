@@ -48,3 +48,56 @@ scrollLink.addEventListener('click', function(e) {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+//Bottone icona
+  
+  let myicon1=document.getElementById('myicon1')
+  let mybottone1=document.getElementById('mybottone1')
+  let myicon2=document.getElementById('myicon2')
+  let mybottone2=document.getElementById('mybottone2')
+  let myicon=document.getElementById('myicon')
+  let mybottone=document.getElementById('mybottone')
+//   function btnResize(element,element2){
+//   window.addEventListener('resize', function () {
+//     if (window.innerWidth < 993 ) {
+//       element.style.display = ' inline-block';
+//       element2.style.display = 'none';
+//     } else {
+//       element.style.display = 'none';
+//       element2.style.display = ' inline-block';
+//     }
+//   });
+// }
+// function btnResize(element,element2){
+//     window.addEventListener('resize', function () {
+//       if (window.innerWidth < 993 ) {
+//         element.style.display = ' inline-block';
+//         element2.style.display = 'none';
+//       } else {
+//         element.style.display = 'none';
+//         element2.style.display = ' inline-block';
+//       }
+//     });
+//   }
+// btnResize(myicon1,mybottone1);
+// btnResize(myicon2,mybottone2);
+// btnResize(myicon,mybottone);
+
+// function btnLoad(element,element2){
+//     window.addEventListener('load', function () {
+//       if (window.innerWidth < 993 ) {
+//         element.style.display = ' inline-block';
+//         element2.style.display = 'none';
+//       } else {
+//         element.style.display = 'none';
+//         element2.style.display = ' inline-block';
+//       }
+//     });
+//   }
+// btnLoad(myicon1,mybottone1);
+// btnLoad(myicon2,mybottone2);
+// btnLoad(myicon,mybottone);
+
+
+
+
