@@ -97,7 +97,13 @@ scrollLink.addEventListener('click', function(e) {
 // btnLoad(myicon1,mybottone1);
 // btnLoad(myicon2,mybottone2);
 // btnLoad(myicon,mybottone);
-
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.scrollY;
+  var documentHeight = document.body.offsetHeight;
+  var windowHeight = window.innerHeight;
+  var progress = Math.floor((scrollPosition / (documentHeight - windowHeight)) * 100);
+  document.getElementById('progress-bar').style.width = progress + '%';
+});
 
 
 

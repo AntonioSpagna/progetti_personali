@@ -7,7 +7,7 @@
     
     
   
-    <div class="container-fluid p-5 text-center text-white">
+    {{-- <div class="container-fluid p-5 text-center text-white">
         <div class="row justify-content-center">
             <h1 class=" text-dark">
                 {{$article->title}}
@@ -50,7 +50,47 @@
                 </div>
             </div>
         </div>
+    </div> --}}
+
+    <div class="container">
+        {{-- row immagine e titolo --}}
+        <div class="row justify-content-center align-content-center">
+            <div  class="col-12 col-md-5 d-flex align-items-center p-0 ">
+                <h1 class="fs-show text-dark">
+                    {{$article->title}}
+                </h1>
+            </div>
+            <div  class="col-12 col-md-7 p-0">
+                <img src="{{Storage::url($article->img)}}" class="img-show" alt="...">
+            </div>
+        </div>
+        {{-- row sottotitolo --}}
+        <div class="row mt-4 ">
+            <h3 class=" text-dark p-0"><i>"{{$article->subtitle}}"</i></h3>
+        </div>
+        {{-- row data --}}
+        <div class="row border-top border-bottom span-data">            
+            <span class="me-5">
+               <i class="fa-solid fa-calendar-days">{{$article->created_at->format('d/m/Y')}} </i> 
+            </span>
+            <span class="me-5">
+               <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}"><i class="fa-solid fa-pen-nib"></i>{{$article->user->name}}</a> 
+            </span>
+            <span class="ms-5">
+                <i class="fa-solid fa-hourglass-half">1 minuto di lettura</i>
+            </span>
+                         
+        </div>
     </div>
+
+
+
+
+
+
+
+
+
     
-    
+ {{-- <div id="progress-bar"></div>    --}}
 </x-layout>

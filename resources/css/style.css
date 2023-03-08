@@ -174,8 +174,16 @@ background-color: rgb(255, 204, 0);
 
 
 .img-show {
-    width:70%;
+    width:100%;   
     
+}
+.fs-show{
+    font-size: 50px;
+    font-weight: 700;
+}
+.span-data{
+    display: inline-block;
+   
 }
 
 .scroll-to-top {
@@ -218,6 +226,21 @@ background-color: rgb(255, 204, 0);
     font-weight: 1300;
 
 }
+
+/* progress bar */
+
+#progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background-color: var(--secondary);
+    transition: width 0.2s ease-in-out;
+  }
+  
+  #progress-bar:hover {
+    height: 10px;
+  }
 
   @media screen and (max-width: 978px){
     .img-show{
