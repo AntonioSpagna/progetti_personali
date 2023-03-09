@@ -145,13 +145,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
-          <li class="nav-item px-3">
+          <li class="nav-item px-1">
             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-3" href="{{route('article.index')}}">Articoli</a>
+            <a class="nav-link px-1" href="{{route('article.index')}}">Articoli</a>
           </li>
-          <li class="nav-item dropdown px-3">
+          <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
             </a>
@@ -161,9 +161,10 @@
               @endforeach  
             </ul>
           </li>
+          
           @guest
           
-          <li class="nav-item dropdown px-3">
+          <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Accedi
             </a>
@@ -173,20 +174,28 @@
             </ul>
           </li>
           @else
-          @if (Auth::user()->is_admin)
+          <li class="nav-item dropdown px-1">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Dasboards
+            </a>
+            <ul class="dropdown-menu menu-drop">
+              @if (Auth::user()->is_admin)
             <li class="nav-item">
-              <a class="nav-link px-3" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
+              <a class="dropdown-item link-drop" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
             </li> 
           @endif
           @if (Auth::user()->is_revisor)
             <li class="nav-item">
-              <a class="nav-link px-3" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
+              <a class="dropdown-item link-drop" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
             </li> 
           @endif
+            </ul>
+          </li>
+          
           <li class="nav-item">
-            <a class="nav-link px-3" href="{{route('careers')}}">Lavora con noi</a>
+            <a class="nav-link px-1" href="{{route('careers')}}">Lavora con noi</a>
           </li>   
-          <li class="nav-item dropdown px-3">
+          <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto {{Auth::user()->name}}
             </a>
@@ -196,12 +205,12 @@
                 @csrf
               </form>             
             </ul>
-          </li> 
-                
-          <li class="nav-item px-3">
-            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
           </li>
         </ul>
+        <form class="d-flex mb-3 mb-md-0" action="{{route('article.search')}}" method="GET">
+          <input type="search" class="form-control me-2" name="query" placeholder="Cosa cerchi" aria-label="Search">
+          <a class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </form>
         <a class="btn ms-2 button_Nav mb-3 mb-lg-0" href="{{route('article.create')}}">Crea articolo</a>
         @endguest
       </div>
