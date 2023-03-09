@@ -137,7 +137,8 @@
   </header>
    --}}
   
-   <nav id="Main_Navbar" class="navbar  navbar-expand-lg p-0">
+
+ <nav id="Main_Navbar" class="navbar  navbar-expand-lg p-0">
     <div class="container-fluid">
       <a class="navbar-brand " href="{{route('homepage')}}"><img class="logo" src="{{Storage::url('/img/logo.png')}}" alt=""></a>
       <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -151,16 +152,16 @@
           <li class="nav-item">
             <a class="nav-link px-1" href="{{route('article.index')}}">Articoli</a>
           </li>
-          <li class="nav-item dropdown px-1">
+           <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               @foreach ($categories as $category)
-                  <li><a class="dropdown-item" href="{{route('article.byCategory' , ['category'=>$category->id])}}"><i class="{{$category->icon}} fs-5 pe-2"></i> {{$category->name}} </a></li>
+                  <li class="dropdown-item"><a  href="{{route('article.byCategory' , ['category'=>$category->id])}}"><i class="{{$category->icon}} fs-5 pe-2"></i> {{$category->name}} </a></li>
               @endforeach  
             </ul>
-          </li>
+          </li> 
           
           @guest
           
@@ -181,20 +182,21 @@
             <ul class="dropdown-menu menu-drop">
               @if (Auth::user()->is_admin)
             <li class="nav-item">
-              <a class="dropdown-item link-drop" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
+              <a class="dropdown-item nav-link link-drop" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
             </li> 
-          @endif
-          @if (Auth::user()->is_revisor)
+           @endif
+           @if (Auth::user()->is_revisor)
             <li class="nav-item">
-              <a class="dropdown-item link-drop" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
+              <a class="dropdown-item nav-link link-drop" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
             </li> 
-          @endif
+           @endif
             </ul>
           </li>
           
           <li class="nav-item">
             <a class="nav-link px-1" href="{{route('careers')}}">Lavora con noi</a>
-          </li>   
+          </li>  
+           
           <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto {{Auth::user()->name}}
@@ -221,4 +223,12 @@
         @endguest
       </div>
     </div>
-  </nav>   
+  </nav>    
+ 
+
+  
+
+
+
+
+
