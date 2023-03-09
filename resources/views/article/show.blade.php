@@ -92,6 +92,20 @@
                 </div>  
             </div>
         </div>
+        <div class="pt-5 text-center">
+            @if (Auth::user() && Auth::user()->is_revisor)
+            @if ($article->is_accepted == NULL)
+            <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="card-button btn-accept">Accetta Articolo</a>
+            <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="card-button btn-discard">Rifiuta Articolo</a>
+            @else 
+          
+                <a href="{{route('revisor.undoArticle', compact('article'))}}" class="card-button btn-discard">Manda in revisione</a>
+                @endif
+                
+                @endif
+                <a class="card-button btn-return mt-2 mt-md-0" href="{{route('article.index')}}">Torna indietro</a>
+            
+        </div>
     </div>
 
 
