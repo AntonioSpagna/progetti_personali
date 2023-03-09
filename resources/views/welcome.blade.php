@@ -99,6 +99,11 @@
                             </div>
                             <h2 class="pt-5">{{$article->title}}</h2>
                             <h6 class="pb-3">{{$article->subtitle}}</h6>
+                            <p class="small fst-italic text-capitalize">
+                                @foreach ($article->tags as $tag)
+                                   # {{$tag->name}} 
+                                @endforeach
+                            </p>
                             <p>
                                 {{subStr($article->body, 0, 50)}}...
                             </p>

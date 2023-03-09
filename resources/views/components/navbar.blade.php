@@ -207,10 +207,16 @@
             </ul>
           </li>
         </ul>
-        <form class="d-flex mb-3 mb-md-0" action="{{route('article.search')}}" method="GET">
-          <input type="search" class="form-control me-2" name="query" placeholder="Cosa cerchi" aria-label="Search">
-          <a class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </form>
+        <div id="modale" class="modale">
+          <div class="contenuto-modale">
+            <span class="chiudi-modale">&times;</span>
+            <form class="d-flex mb-3 mb-md-0" action="{{route('article.search')}}" method="GET">
+              <input type="search" class="form-control me-2" name="query" placeholder="Cosa cerchi" aria-label="Search">
+              <button class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+          </div>
+        </div>
+        <a class="btn btn-outline-info" id="mostra-modale" type="submit"><i class="fa-solid fa-magnifying-glass"></i></a>
         <a class="btn ms-2 button_Nav mb-3 mb-lg-0" href="{{route('article.create')}}">Crea articolo</a>
         @endguest
       </div>
