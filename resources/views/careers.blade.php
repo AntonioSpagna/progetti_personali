@@ -95,13 +95,13 @@
                         @enderror    
                     </div>
                     <!-- Submit button -->
-                  
+                    <div class="d-flex justify-content-center mt-3">
+                        <button type="submit" class="btn btn-primary ">Invia la candidatura</button>
+                    </div>
                 </form>
                 
             </div>
-            <div class="d-flex justify-content-center mt-3">
-                <button type="submit" class="btn btn-primary ">Invia la candidatura</button>
-            </div>
+            
         </div>
     </div>
 </x-layout>
