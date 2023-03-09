@@ -49,4 +49,14 @@
             </div>
         </div>
     </div>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2>Tags della piattaforma</h2>
+                <x-metainfo-table
+                    :metaInfos="$tags" metaType="tags"
+                />
+            </div>
+        </div>
+    </div>
 </x-layout>
