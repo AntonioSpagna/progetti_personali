@@ -76,9 +76,9 @@ class AdminController extends Controller
     }
 
     public function deleteCategory(Category $category){
-        foreach($category->articles as $article){
-         $article->categories()->detach($category);
-        }
+        // foreach($categories->articles as $article){
+        //  $article->categories()->detach($category);
+        // }
          
          $category->delete();
  
