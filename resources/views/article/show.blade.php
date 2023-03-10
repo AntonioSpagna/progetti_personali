@@ -87,7 +87,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-10">
-                <div class="mt-5 text-center">
+                <div class="mt-5">
                     <p>{{$article->body}}</p> 
                 </div>  
             </div>

@@ -110,6 +110,18 @@ a{
   color: var(--secondary);
 }
 
+.btn-search{
+  background-color: var(--secondary);
+  color: var(--main);
+  border: 0;
+}
+
+.btn-search:hover{
+  background-color: var(--main);
+  color: var(--secondary);
+  border: 0;
+}
+
 /* BTN Accetta articolo */
 .btn-accept{
   padding: 14px 24px;
@@ -200,7 +212,9 @@ a{
   
   .hidden-col{
     display: none;
-  }   
+  }
+  
+  
 }
 
 

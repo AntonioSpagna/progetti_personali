@@ -165,7 +165,7 @@
           
           @guest
           
-          <li class="nav-item dropdown px-1 px-md-5">
+          <li class="nav-item dropdown px-1 px-md-3">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Accedi
             </a>
@@ -211,6 +211,11 @@
           </li>
         </ul>
     
+        
+            
+         
+        <a class="btn mx-2 mx-md-4 button_Nav mb-3 mb-xl-0" href="{{route('article.create')}}">Crea articolo</a>
+        @endguest
         <div id="myModal" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
@@ -220,12 +225,10 @@
             </form>
           </div>
         </div>
-          
-              <button id="myBtn" class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> 
             
-         
-        <a class="btn mx-2 mx-md-4 button_Nav mb-3 mb-lg-0" href="{{route('article.create')}}">Crea articolo</a>
-        @endguest
+                <button id="myBtn" class="btn-search me-md-3" type="submit"><i class="fa-solid fa-magnifying-glass fs-4"></i></button> 
+
+            
       </div>
     </div>
   </nav>    

@@ -96,14 +96,14 @@
                         <div class="col-6 ps-5 ">
                             <div class="pt-3" id="iconContainer">
                                 @if ($article->category)
-                                <a class="mt-5  small text-muted fst-italic text-capitalize" id="iconCategory" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/  {{$article->category->name}}   <i class="{{$article->category->icon}} ps-1 fs-4"></i></a>
+                                <a class="mt-5  small text-muted fst-italic text-capitalize" id="iconCategory" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/  {{$article->category->name}}   <i class="{{$article->category->icon}} ps-1 fs-5"></i></a>
                                 @else
                                 <p class="small text-muted fst-italic text-capitalize">Non Categorizzato</p>
                                 @endif
                                
                             </div>
-                            <h2 class="pt-5">{{$article->title}}</h2>
-                            <h6 class="pb-3">{{$article->subtitle}}</h6>
+                            <h2 class="pt-3">{{substr($article->title, 0, 50)}}...</h2>
+                            <h6 class="pb-3">{{substr($article->subtitle, 0, 65)}}...</h6>
                             <p class="small fst-italic text-capitalize">
                                 @foreach ($article->tags as $tag)
                                    # {{$tag->name}} 
@@ -115,7 +115,7 @@
                             <div>
                                 Redatto il: {{$article->created_at->format('d/m/Y')}} da <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}">{{$article->user->name}}</a>
                             </div>
-                            <a href="{{route('article.show', compact('article'))}}" class="pt-5" type="submit">Leggi adesso<span><i class="fa-solid arrow ps-3 fa-arrow-right-long"></i></span></a>
+                            <a href="{{route('article.show', compact('article'))}}" class="pt-3 fs-5" type="submit">Leggi adesso<span><i class="fa-solid arrow ps-3 fa-arrow-right-long"></i></span></a>
                         </div>
                     </div> 
                 </div>
@@ -132,20 +132,25 @@
                         <div class="col-6 ps-5 ">
                             <div class="pt-3 ">
                                 @if ($article->category)
-                                <a class="mt-5  small text-muted fst-italic text-capitalize" id="iconCategory" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/  {{$article->category->name}}   <i class="{{$article->category->icon}} ps-1 fs-4"></i></a>
+                                <a class="mt-5  small text-muted fst-italic text-capitalize" id="iconCategory" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/  {{$article->category->name}}   <i class="{{$article->category->icon}} ps-1 fs-5"></i></a>
                                 @else
                                 <p class="small text-muted fst-italic text-capitalize">Non Categorizzato</p>
                                 @endif
                             </div>
-                            <h2 class="pt-5">{{$article->title}}</h2>
-                            <h6 class="pb-3">{{$article->subtitle}}</h6>
+                            <h2 class="pt-3">{{substr($article->title, 0, 50)}}...</h2>
+                            <h6 class="pb-3">{{substr($article->subtitle, 0, 70)}}...</h6>
+                            <p class="small fst-italic text-capitalize">
+                                @foreach ($article->tags as $tag)
+                                   # {{$tag->name}} 
+                                @endforeach
+                            </p>
                             <p >
                                 {{subStr($article->body, 0, 50)}}...
                             </p>
                             <div>
                                 Redatto il: {{$article->created_at->format('d/m/Y')}} da <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}">{{$article->user->name}}</a>
                             </div>
-                            <a href="{{route('article.show', compact('article'))}}" class="pt-5" type="submit">Leggi adesso<span class=""><i class="fa-solid arrow ps-3 fa-arrow-right-long"></i></span></a>
+                            <a href="{{route('article.show', compact('article'))}}" class="pt-3 fs-5" type="submit">Leggi adesso<span class=""><i class="fa-solid arrow ps-3 fa-arrow-right-long"></i></span></a>
                         </div>
                         {{-- colonna destra --}}
                         <div class="col-6 p-0 bordo-dx rowclsx">
