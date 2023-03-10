@@ -276,6 +276,18 @@ background-color: rgb(255, 204, 0);
     #myicon {
       display: inline-block;
     }
+    #mybottone1 {
+        display: none;
+      }
+      #myicon1 {
+        display: inline-block;
+      }
+      #mybottone2 {
+        display: none;
+      }
+      #myicon2 {
+        display: inline-block;
+      }
   }
   @media only screen and (min-width: 994px) {
     #mybottone {
@@ -284,4 +296,16 @@ background-color: rgb(255, 204, 0);
     #myicon {
       display: none;
     }
+    #mybottone1 {
+        display: inline-block;
+      }
+      #myicon1 {
+        display: none;
+      }
+      #mybottone2 {
+        display: inline-block;
+      }
+      #myicon2 {
+        display: none;
+      }
   } 

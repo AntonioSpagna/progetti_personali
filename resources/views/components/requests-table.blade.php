@@ -26,7 +26,7 @@
                       @break
                   @case('redattore')
                         <a  href="{{route('admin.setRevisor',compact('user'))}}"><i id="myicon2" class="fa-solid  user_check fa-user-check "></i></a> 
-                        <a href="{{route('admin.setWriter',compact('user'))}}" id="mybottone2" class="btn"><i class="fa-solid user_check fa-user-check "></i>Attiva {{$role}}</a>
+                        <a href="{{route('admin.setWriter',compact('user'))}}" id="mybottone2" class="btn">Attiva {{$role}}</a>
                   @break      
               @endswitch
                 
