@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
-            <h1 class="text-center">Bentornato Revisore</h1>
+            <h1 class="text-center">Dashboard Revisore</h1>
         </div>
     </div> 
     @if ($errors->any())
@@ -22,7 +22,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>Articoli da revisionare</h2>
+                <h2 class="fw-semibold">Articoli da revisionare</h2>
                 <x-articles-table
                     :articles="$unrevisionedArticles"
                 />
@@ -32,7 +32,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>Articoli pubblicati</h2>
+                <h2 class="fw-semibold">Articoli pubblicati</h2>
                 <x-articles-table
                     :articles="$acceptedArticles"
                 />
@@ -42,7 +42,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>Articoli respinti</h2>
+                <h2 class="fw-semibold">Articoli respinti</h2>
                 <x-articles-table
                     :articles="$rejectedArticles"
                 />
