@@ -1,4 +1,4 @@
-:root{
+ :root{
     --main:white;
     --primary:black;
     --secondary:rgb(6, 57, 108);
@@ -9,11 +9,14 @@
 .logo{ 
      width: 100px;
     padding-left: 10px; 
-    color: var(--main);
+    color: var(--main); 
+
+/* da eliminare */
      /* width: 5rem;
     height: 5rem;
     display: flex; */
     
+
 }
 .color_blue{
     background-color: var(--secondary);
@@ -37,11 +40,6 @@
 }
 
 
-
-
-
-
-
 .menu-drop {
     border-radius: 0%;
 }
@@ -61,7 +59,7 @@
     background-color: var(--secondary);
 }
 
-.navbar .nav-link {
+ .navbar .nav-link {
     display: block;
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
     font-size: var(--bs-nav-link-font-size);
@@ -71,9 +69,6 @@
     text-decoration: none;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
-/* .navbar.bg-white .nav-link {
-    color: red
-} */
 
 .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
     color: var(--main);
@@ -85,14 +80,15 @@
     position: relative;
     padding: 0;
     transition: all linear 300ms;
-}
+} 
 
-/* .navbar-nav .nav-item:hover {
+ .navbar-nav .nav-item:hover {
     color: var(--secondary);
     
-} */
+}
+
 /* bordo inferiore link cliccato */
-.navbar-nav .nav-link.active::after {
+ .navbar-nav .nav-link.active::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -101,12 +97,18 @@
     height: 2px;
     width: 100%;
     background-color: var(--main);
-}
+} 
+
 /* colore testo link hover */
-/* .navbar-nav .nav-link:hover {
+ .navbar-nav .nav-link:hover {
     color: var(--main);
 
-} */
+} 
+
+.dropdown-item{
+    color: black;
+}
+
 /* bordo inferiore link hover */
 .navbar-nav .nav-link::before {
     position: absolute;
@@ -120,6 +122,7 @@
     transform: translateX(-50%);
     transition: all linear 250ms;
     }
+
 .navbar-nav .nav-link:hover::before {
         width: 80%;
     }
@@ -163,10 +166,10 @@
     .navbar-nav .nav-link::before {
         height: 0;
     }
-}
+} 
 
-/* Modale Search */
-.modale {
+ /* Modale Search  */
+ /* .modale {
     display: none;
     position: fixed;
     z-index: 1;
@@ -198,8 +201,8 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
-  
+  } */
+
   
 
 

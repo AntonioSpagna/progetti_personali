@@ -26,22 +26,22 @@ window.addEventListener('scroll', function() {
 
 /* Modale Search */
 
-  let mostraModaleButton = document.getElementById('mostra-modale');
-  let modale = document.getElementById('modale');
-  let chiudiModaleButton = document.querySelector('.chiudi-modale');
+  // let mostraModaleButton = document.getElementById('mostra-modale');
+  // let modale = document.getElementById('modale');
+  // let chiudiModaleButton = document.querySelector('.chiudi-modale');
 
-  mostraModaleButton.addEventListener('click', function() {
-    modale.style.display = 'block';
-  });
+  // mostraModaleButton.addEventListener('click', function() {
+  //   modale.style.display = 'block';
+  // });
 
-  chiudiModaleButton.addEventListener('click', function() {
-    modale.style.display = 'none';
-  });
+  // chiudiModaleButton.addEventListener('click', function() {
+  //   modale.style.display = 'none';
+  // });
 
-  window.addEventListener('click', function(event) {
-    if (event.target == modale) {
-      modale.style.display = 'none';
-    }
-  });
+  // window.addEventListener('click', function(event) {
+  //   if (event.target == modale) {
+  //     modale.style.display = 'none';
+  //   }
+  // });
 
 
