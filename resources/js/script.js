@@ -26,22 +26,29 @@ window.addEventListener('scroll', function() {
 
 /* Modale Search */
 
-  // let mostraModaleButton = document.getElementById('mostra-modale');
-  // let modale = document.getElementById('modale');
-  // let chiudiModaleButton = document.querySelector('.chiudi-modale');
+// selezionare la modale e il pulsante per aprirla
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
 
-  // mostraModaleButton.addEventListener('click', function() {
-  //   modale.style.display = 'block';
-  // });
+// selezionare lo span per chiudere la modale
+var span = document.getElementsByClassName("close")[0];
 
-  // chiudiModaleButton.addEventListener('click', function() {
-  //   modale.style.display = 'none';
-  // });
+// quando l'utente clicca sul pulsante, aprire la modale
+btn.onclick = function() {
+  modal.style.display = "block";
+}
 
-  // window.addEventListener('click', function(event) {
-  //   if (event.target == modale) {
-  //     modale.style.display = 'none';
-  //   }
-  // });
+// quando l'utente clicca sulla X, chiudere la modale
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// quando l'utente clicca fuori dalla modale, chiudere la modale
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 
 
