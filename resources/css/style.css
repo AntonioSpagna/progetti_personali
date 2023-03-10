@@ -31,6 +31,7 @@ p{
 /* A */
 a{
     text-decoration: none;
+    color: var(--primary);
  }
 
 .color-hv:hover{
@@ -268,7 +269,7 @@ background-color: rgb(255, 204, 0);
   }
 
   /* Ridimensionamento del bottone */
-  @media only screen and (max-width: 993px) {
+ @media only screen and (max-width: 993px) {
     #mybottone {
       display: none;
     }
@@ -283,4 +284,4 @@ background-color: rgb(255, 204, 0);
     #myicon {
       display: none;
     }
-  }
+  } 

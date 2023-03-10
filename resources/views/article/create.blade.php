@@ -54,6 +54,12 @@
                         <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
                     </select>
+                    {{-- Tags --}}
+                    <div class="form-outline mt-4">
+                        <label class="fw-semibold" for="tags">Tag</label>
+                        <input name="tags" id="tags" class="form-control" value="{{old('tags')}}">
+                        <span class="small fst-italic">Dividi ogni tag con una virgola</span>
+                    </div>
                     <!-- body input -->
                     <div class="form-outline mb-4">
                         <label class="form-label mt-3 fw-semibold">Corpo dell'articolo</label>

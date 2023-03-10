@@ -15,7 +15,12 @@
                 <div class="card-details">
                   <h4 class="text-title">{{$article->title}}</h4>
                   <h6 class="text-title">{{$article->subtitle}}</h6>
-                  <p class="text-title">{{$article->category->name}}</p>                          
+                  <p class="text-title">{{$article->category->name}}</p>    
+                  <p class="small fst-italic text-capitalize">
+                    @foreach ($article->tags as $tag)
+                       # {{$tag->name}} 
+                    @endforeach
+                </p>                      
                 </div>
                 <div>
                     Redatto il: {{$article->created_at->format('d/m/Y')}} da <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}">{{$article->user->name}}</a>
