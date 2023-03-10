@@ -76,12 +76,19 @@ class AdminController extends Controller
     }
 
     public function deleteCategory(Category $category){
-        foreach($category->articles as $article){
-         $article->categories()->detach($category);
-        }
+        // foreach($categories->articles as $article){
+        //  $article->categories()->detach($category);
+        // }
          
          $category->delete();
  
          return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente eliminato la categoria.');
+     }
+
+     public function storeCategory(Request $request){
+        Category::create([
+            'name'=> strtolower($request->name),
+        ]);
+        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente inserito una nuova categoria');
      }
 }

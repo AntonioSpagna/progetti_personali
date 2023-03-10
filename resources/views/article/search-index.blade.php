@@ -15,7 +15,11 @@
                 <div class="card-details">
                   <h4 class="text-title">{{$article->title}}</h4>
                   <h6 class="text-title">{{$article->subtitle}}</h6>
-                  <p class="text-title">{{$article->category->name}}</p>    
+                  @if ($article->category)
+                  <a class="mt-5  small text-muted fst-italic text-capitalize" id="iconCategory" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/  {{$article->category->name}}   <i class="{{$article->category->icon}} ps-1 fs-4"></i></a>
+                  @else
+                  <p class="small text-muted fst-italic text-capitalize">Non Categorizzato</p>
+                  @endif    
                   <p class="small fst-italic text-capitalize">
                     @foreach ($article->tags as $tag)
                        # {{$tag->name}} 

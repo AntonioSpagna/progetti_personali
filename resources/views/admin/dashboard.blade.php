@@ -66,6 +66,11 @@
                 <x-metainfo-table
                     :metaInfos="$categories" metaType="categorie"
                 />
+                <form action="{{route('admin.storeCategory')}}" method="POST" class="d-flex">
+                    @csrf
+                    <input type="text" name='name' class="form-control me-2" placeholder="Inserisci una nuova categoria">
+                    <button type="submit" class="btn">Aggiungi</button>
+                </form>
             </div>
         </div>
     </div>

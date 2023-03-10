@@ -106,7 +106,7 @@
 } 
 
 .dropdown-item{
-    color: black;
+    color: var(--primary);
 }
 
 /* bordo inferiore link hover */

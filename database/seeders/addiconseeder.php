@@ -16,7 +16,7 @@ class addiconseeder extends Seeder
         $icons=
         [
             
-            "fa-solid fa-futbol",
+            
             "fa-solid fa-car",
             "fa-solid fa-vest",
             "fa-solid fa-landmark",
@@ -25,7 +25,8 @@ class addiconseeder extends Seeder
             "fa-solid fa-kitchen-set",
             "fa-solid fa-leaf",
             "fa-solid fa-microchip",
-            "fa-solid fa-cloud-sun"
+            "fa-solid fa-cloud-sun",
+            "fa-solid fa-futbol",
         ];
         $i=0;
         // DB::table('categories')->insert()

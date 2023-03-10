@@ -49,7 +49,7 @@
                     </div>
                     {{-- categorie input --}}
                     <label class="fw-semibold">Categorie</label>
-                    <select name="category" class="form-control " >
+                    <select name="category" class="form-control">
                         @foreach ($categories as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach

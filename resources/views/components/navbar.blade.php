@@ -150,7 +150,7 @@
             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-1" href="{{route('article.index')}}">Articoli</a>
+            <a class="nav-link px-1 px-md-3" href="{{route('article.index')}}">Articoli</a>
           </li>
            <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -165,7 +165,7 @@
           
           @guest
           
-          <li class="nav-item dropdown px-1">
+          <li class="nav-item dropdown px-1 px-md-5">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Accedi
             </a>
@@ -175,24 +175,25 @@
             </ul>
           </li>
           @else
+          @if (Auth::user()->is_admin || Auth::user()->is_revisor)
           <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             Dasboards
+             Dashboards
             </a>
             <ul class="dropdown-menu menu-drop">
               @if (Auth::user()->is_admin)
             <li class="nav-item">
-              <a class="dropdown-item nav-link link-drop" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
+              <a class="dropdown-item link-drop" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
             </li> 
            @endif
            @if (Auth::user()->is_revisor)
             <li class="nav-item">
-              <a class="dropdown-item nav-link link-drop" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
+              <a class="dropdown-item link-drop " href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
             </li> 
            @endif
             </ul>
           </li>
-          
+          @endif
           <li class="nav-item">
             <a class="nav-link px-1" href="{{route('careers')}}">Lavora con noi</a>
           </li>  
@@ -209,17 +210,17 @@
             </ul>
           </li>
         </ul>
-        <div id="modale" class="modale">
+        {{-- <div id="modale" class="modale">
           <div class="contenuto-modale">
-            <span class="chiudi-modale">&times;</span>
+            <span class="chiudi-modale">&times;</span> --}}
             <form class="d-flex mb-3 mb-md-0" action="{{route('article.search')}}" method="GET">
               <input type="search" class="form-control me-2" name="query" placeholder="Cosa cerchi" aria-label="Search">
               <button class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-          </div>
-        </div>
-        <a class="btn btn-outline-info" id="mostra-modale" type="submit"><i class="fa-solid fa-magnifying-glass"></i></a>
-        <a class="btn ms-2 button_Nav mb-3 mb-lg-0" href="{{route('article.create')}}">Crea articolo</a>
+          {{-- </div>
+        </div> --}}
+        
+        <a class="btn mx-2 mx-md-4 button_Nav mb-3 mb-lg-0" href="{{route('article.create')}}">Crea articolo</a>
         @endguest
       </div>
     </div>
