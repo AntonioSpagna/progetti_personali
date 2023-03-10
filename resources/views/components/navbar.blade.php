@@ -150,7 +150,7 @@
             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-1" href="{{route('article.index')}}">Articoli</a>
+            <a class="nav-link px-1 px-md-3" href="{{route('article.index')}}">Articoli</a>
           </li>
            <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -165,7 +165,7 @@
           
           @guest
           
-          <li class="nav-item dropdown px-1">
+          <li class="nav-item dropdown px-1 px-md-5">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Accedi
             </a>
@@ -220,7 +220,7 @@
           {{-- </div>
         </div> --}}
         
-        <a class="btn ms-2 button_Nav mb-3 mb-lg-0" href="{{route('article.create')}}">Crea articolo</a>
+        <a class="btn mx-2 mx-md-4 button_Nav mb-3 mb-lg-0" href="{{route('article.create')}}">Crea articolo</a>
         @endguest
       </div>
     </div>
