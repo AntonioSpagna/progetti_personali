@@ -150,7 +150,7 @@
             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-1 px-md-3" href="{{route('article.index')}}">Articoli</a>
+            <a class="nav-link px-1 px-lg-3" href="{{route('article.index')}}">Articoli</a>
           </li>
            <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -210,16 +210,20 @@
             </ul>
           </li>
         </ul>
-        {{-- <div id="modale" class="modale">
-          <div class="contenuto-modale">
-            <span class="chiudi-modale">&times;</span> --}}
+    
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
             <form class="d-flex mb-3 mb-md-0" action="{{route('article.search')}}" method="GET">
               <input type="search" class="form-control me-2" name="query" placeholder="Cosa cerchi" aria-label="Search">
               <button class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-          {{-- </div>
-        </div> --}}
-        
+          </div>
+        </div>
+          
+              <button id="myBtn" class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> 
+            
+         
         <a class="btn mx-2 mx-md-4 button_Nav mb-3 mb-lg-0" href="{{route('article.create')}}">Crea articolo</a>
         @endguest
       </div>
