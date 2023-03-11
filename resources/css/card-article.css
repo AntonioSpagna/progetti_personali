@@ -117,6 +117,13 @@
 .imgvclsx{
   object-fit: cover;  
   height: 100%;
+  
+}
+
+.imgvclsx-category{
+object-fit: cover;  
+  height: 100%;
+  clip-path: polygon(0% 0%, 100% 0, 50% 100%, 0% 100%);
 }
 
 .rowclsx{
