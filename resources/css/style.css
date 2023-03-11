@@ -124,6 +124,8 @@ a{
 
 /* BTN Accetta articolo */
 .btn-accept{
+  display: inline-block;
+  width: 214px;
   padding: 14px 24px;
   margin-left: 0;
   font-size: 16px;
@@ -135,6 +137,8 @@ a{
   transition: background-color 0.2s ease-in-out;
   cursor: pointer
 }
+
+
 
 .btn-accept:hover{
   background-color: rgb(29, 211, 29);
@@ -212,7 +216,7 @@ a{
   
   .hidden-col{
     display: none;
-  }
+  } 
   
   
 }
@@ -288,6 +292,10 @@ a{
   width: 25%;
 }
 
+.table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+}
+
 /* Ridimensionamento del bottone */
 @media only screen and (max-width: 993px) {
   #mybottone {
@@ -320,6 +328,39 @@ a{
   #myicon4 {
     display: inline-block;
   }
+
+  #mybottone5 {
+    display: none;
+  }
+  #myicon5 {
+    display: inline-block;
+  }
+
+  #mybottone6 {
+    display: none;
+  }
+  #myicon6 {
+    display: inline-block;
+  }
+
+  #mybottone7 {
+    display: none;
+  }
+  #myicon7 {
+    display: inline-block;
+  }
+
+  #mybottone8 {
+    display: none;
+  }
+  #myicon8 {
+    display: inline-block;
+  }
+
+  .table > :not(caption) > * > * {
+    padding: 0.5rem 0;
+  }
+
 }
 @media only screen and (min-width: 994px) {
   #mybottone {
@@ -350,6 +391,34 @@ a{
     display: inline-block;
   }
   #myicon4 {
+    display: none;
+  }
+
+  #mybottone5 {
+    display: inline-block;
+  }
+  #myicon5 {
+    display: none;
+  }
+
+  #mybottone6 {
+    display: inline-block;
+  }
+  #myicon6 {
+    display: none;
+  }
+
+  #mybottone7 {
+    display: inline-block;
+  }
+  #myicon7 {
+    display: none;
+  }
+
+  #mybottone8 {
+    display: inline-block;
+  }
+  #myicon8 {
     display: none;
   }
 } 

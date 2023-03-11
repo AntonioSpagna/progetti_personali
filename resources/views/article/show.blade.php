@@ -96,7 +96,7 @@
             @if (Auth::user() && Auth::user()->is_revisor)
             @if ($article->is_accepted == NULL)
             <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="card-button btn-accept">Accetta Articolo</a>
-            <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="card-button btn-discard">Rifiuta Articolo</a>
+            <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="card-button btn-discard mt-2">Rifiuta Articolo</a>
             @else 
           
                 <a href="{{route('revisor.undoArticle', compact('article'))}}" class="card-button btn-discard">Manda in revisione</a>
