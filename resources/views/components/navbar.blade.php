@@ -226,7 +226,14 @@
           </div>
         </div>
             
-                <button id="myBtn" class="btn-search me-md-3" type="submit"><i class="fa-solid fa-magnifying-glass fs-4"></i></button> 
+             
+            @if (Auth::check())
+            <button id="myBtn" class="btn-search me-md-3" type="submit"><i class="fa-solid fa-magnifying-glass fs-4"></i></button> 
+            @else
+            <button id="myBtn" class="btn-search2 me-md-3" type="submit"><i class="fa-solid fa-magnifying-glass fs-4"></i></button>   
+             @endif
+          
+                
 
             
       </div>

@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 text-center">
+    <div class="container-fluid p-2 text-center">
         <div class="row justify-content-center">
             <h1 class="">
                 Categoria {{$category->name}}
@@ -7,7 +7,7 @@
         </div>
     </div>
     
-    <div class="container-fluid p-5 text-center">
+    <div class="container-fluid p-2 text-center">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
                 <div class="col-12 col-md-8 col-lg-6 d-flex justify-content-center">

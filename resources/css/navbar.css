@@ -2,8 +2,9 @@
     --main:white;
     --primary:black;
     --secondary:rgb(6, 57, 108);
-    --third: rgb(168, 168, 168);
-    
+    --footer:rgb(3, 49, 95);
+    --third: rgb(117, 117, 117);
+    --light-gray:rgb(58, 58, 58);
 }
 
 .logo{ 
@@ -206,6 +207,10 @@
 
     .btn-search{
         margin-left: 130px;
+    }
+
+    .btn-search2{
+        margin-left: -314px;
     }
 } 
 
