@@ -5,11 +5,12 @@
                 Utente {{$user->name}}
             </h1>
         </div>
-    </div>
-    
+    </div>    
   
-            @foreach ($articles as $article)
-            @if ($article->id%2==0)
+    @foreach ($articles as $article)
+
+        @if ($article->id%2==0)
+
             <div id="card-a" class="container zoom my-5 bordo vh-50">
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-12">
@@ -43,7 +44,7 @@
                 </div>
             </div>
             
-            @else       
+        @else       
             
             <div id="card-a" class="container zoom my-5 bordo vh-50">
                 <div class="row">
@@ -82,8 +83,9 @@
                     </div>
                 </div>
             </div>
-            @endif
-            @endforeach    
-        
+
+        @endif
+
+    @endforeach       
      
 </x-layout>

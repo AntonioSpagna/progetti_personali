@@ -6,8 +6,9 @@
         </h1>
     </div>
 </div>
- @foreach ($articles as $article)
+@foreach ($articles as $article)
     @if ($article->id%2==0)
+
     <div id="card-a" class="container zoom my-5 bordo vh-50">
         <div class="row">
             <div class="col-12 col-md-12 col-lg-12">
@@ -17,7 +18,7 @@
                         <img src="{{Storage::url($article->img)}}" class="w-100 imgvclsx" alt="">
                     </div>
                     {{-- colonna destra --}}
-                    <div class="col-6 ps-5 ">
+                    <div class="col-6 ps-4 ">
                         <div class="pt-3">
                             @if ($article->category)
                             <a class="mt-5  small text-muted fst-italic text-capitalize" id="iconCategory" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/  {{$article->category->name}}   <i class="{{$article->category->icon}} ps-1 fs-4"></i></a>
@@ -43,19 +44,16 @@
                 </div> 
             </div>
         </div>
-    </div>
-    
-    
+    </div>  
     
     @else       
-     
     
     <div id="card-a" class="container zoom my-5 bordo vh-50">
         <div class="row">
             <div class="col-12 col-md-12 col-lg-12">
                 <div class="row flex-column-reverse flex-md-row">
                     {{-- colonna sinitra --}}
-                    <div class="col-6 ps-5 ">
+                    <div class="col-6 ps-4 ">
                         <div class="pt-3">
                             @if ($article->category)
                             <a class="mt-5  small text-muted fst-italic text-capitalize" id="iconCategory" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/  {{$article->category->name}}   <i class="{{$article->category->icon}} ps-1 fs-4"></i></a>
@@ -81,14 +79,14 @@
                     {{-- colonna destra --}}
                     <div class="col-6 p-0 bordo-dx rowclsx">
                         <img src="{{Storage::url($article->img)}}" class="w-100 imgvclsx" alt="">
-                    </div>
-                    
+                    </div>                    
                 </div> 
             </div>
         </div>
     </div>
+
     @endif
     
-    @endforeach       
+@endforeach       
 
 </x-layout>

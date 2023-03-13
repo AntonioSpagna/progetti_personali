@@ -5,29 +5,7 @@
                 Categoria {{$category->name}}
             </h1>
         </div>
-    </div>
-    
-    {{-- <div class="container-fluid p-2 text-center">
-        <div class="row justify-content-center">
-            @foreach ($articles as $article)
-                <div class="col-12 col-md-8 col-lg-6 d-flex justify-content-center">
-                    <div class="card">
-                        <img src="{{Storage::url($article->img)}}" alt="" class="card-img-top ">
-                        <div class="card-details">
-                          <h4 class="text-title">{{$article->title}}</h4>
-                          <h6 class="text-title">{{$article->subtitle}}</h6>
-                          <p class="text-title">{{$article->category->name}}</p>                          
-                        </div>
-                        <div>
-                            Redatto il: {{$article->created_at->format('d/m/Y')}} da <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}">{{$article->user->name}}</a>
-                        </div>
-                        <a type="submit" class="card-button btn" href="{{route('article.show', compact('article'))}}">Leggi</a>
-                      </div>
-                </div>
-            @endforeach
-        </div>
-    </div> --}}
-
+    </div>      
 
     @foreach ($articles as $article)
     @if ($article->id%2==0)
@@ -40,7 +18,7 @@
                         <img src="{{Storage::url($article->img)}}" class="w-100 imgvclsx " alt="">
                     </div>
                     {{-- colonna destra --}}
-                    <div class="col-6 ps-5 ">
+                    <div class="col-6 ps-4 ">
                         <div class="pt-3" id="iconContainer">
                             @if ($article->category)
                             <a class="mt-5  small text-muted fst-italic text-capitalize" id="iconCategory" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/  {{$article->category->name}}   <i class="{{$article->category->icon}} ps-1 fs-5"></i></a>
@@ -71,7 +49,7 @@
             <div class="col-12 col-md-12 col-lg-12">
                 <div class="row flex-column-reverse flex-md-row">
                     {{-- colonna sinitra --}}
-                    <div class="col-6 ps-5 ">
+                    <div class="col-6 ps-4 ">
                         <div class="pt-3 ">
                             @if ($article->category)
                             <a class="mt-5  small text-muted fst-italic text-capitalize" id="iconCategory" href="{{route('article.byCategory' , ['category'=>$article->category->id])}}">/  {{$article->category->name}}   <i class="{{$article->category->icon}} ps-1 fs-5"></i></a>

@@ -10,21 +10,25 @@
 </head>
 <body>
     <x-navbar/>
+
     <div class="scroll-to-top">
         <a href="#" class="scroll-link">
           <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-    <div class=" my-5 bg-white">
+
+    <div class=" my-5 px-3 px-lg-0 bg-white min-vh-100">
         {{$slot}}
     </div>
-    <x-footer/>
+
+    <x-footer/> 
+
     <script src="https://kit.fontawesome.com/58c29b2b44.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
         disable: 'mobile',
       });
-    </script>
+    </script>  
 </body>
 </html>

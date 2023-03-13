@@ -15,6 +15,7 @@
                 <th scope="row">{{$metaInfo->id}}</th>  
                 <td>{{$metaInfo->name}}</td>
                 <td>{{count($metaInfo->articles)}}</td>
+
                 @if ($metaType == 'tags')
                 <td>
                     <form action="{{route('admin.editTag',['tag' => $metaInfo])}}" method="POST">
@@ -22,10 +23,9 @@
                         @method('put')
                         <div class="d-flex flex-column align-items-center align-items-lg-start">
                             <input type="text" name="name" placeholder="Nuovo nome Tag" class="form-control w-75 d-inline">
-                            <a type="submit"><i  id="myicon5" class="fa-solid fa-square-check fs-4 mt-1"></i></a>
-                            <a id="mybottone5" class="btn mt-1" type="submit">Aggiorna</a>
-                        </div>
-                        
+                            <button class="border-none"type="submit"><i  id="myicon5" class="fa-solid fa-square-check fs-4 mt-1"></i></button>
+                            <button id="mybottone5" class="btn mt-1" type="submit">Aggiorna</button>
+                        </div>                        
                     </form>
                 </td>
                 <td>
@@ -33,12 +33,12 @@
                         @csrf
                         @method('delete')
                         <div class="text-center">
-                            <a  type="submit"><i id="myicon6" class="fa-solid fa-trash-can"></i></a>
-                        </div>                     
-                        
-                        <a id="mybottone6" class="btn" type="submit">Elimina</a>
+                            <button class="border-none" type="submit"><i id="myicon6" class="fa-solid fa-trash-can"></i></button>
+                        </div>                                        
+                        <button id="mybottone6" class="btn" type="submit">Elimina</button>
                     </form>
                 </td>
+                
                 @else
                 <td>
                     <form action="{{route('admin.editCategory', ['category' => $metaInfo])}}" method="POST">
@@ -46,8 +46,8 @@
                         @method('put')
                         <div class="d-flex flex-column align-items-center align-items-lg-start">
                             <input type="text" name="name" placeholder="Nuovo nome Categoria" class="form-control w-75 d-inline">
-                            <a type="submit"><i  id="myicon7" class="fa-solid fa-square-check fs-4 mt-1"></i></a>
-                            <a id="mybottone7" class="btn mt-1" type="submit">Aggiorna</a>
+                            <button class="border-none" type="submit"><i  id="myicon7" class="fa-solid fa-square-check fs-4 mt-1"></i></button>
+                            <button id="mybottone7" class="btn mt-1" type="submit">Aggiorna</button>
                         </div>
                     </form>
                 </td>
@@ -56,9 +56,9 @@
                         @csrf
                         @method('delete')
                         <div class="text-center">
-                            <a  type="submit"><i id="myicon8" class="fa-solid fa-trash-can"></i></a>
+                            <button class="border-none" type="submit"><i id="myicon8" class="fa-solid fa-trash-can"></i></button>
                         </div>
-                        <a id="mybottone8" class="btn" type="submit">Elimina</a>
+                        <button id="mybottone8" class="btn" type="submit">Elimina</button>
                     </form>
                 </td>
                 @endif

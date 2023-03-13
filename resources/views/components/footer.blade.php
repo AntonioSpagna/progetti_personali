@@ -11,8 +11,16 @@
                 <ul class="footer-links">
                     <li><a href="{{route('homepage')}}">Home</a></li>
                     <li><a href="{{route('article.index')}}">Tutti i nostri articoli</a></li>
-                    <li><a href="http://scanfcode.com/category/java-programming-language/">Articoli per autore</a></li>
+                    {{-- @foreach ($users as $user)
+                        <li><a href="{{route('article.byUser', ['user'=>$user->id])}}">Articoli per autore</a></li>
+          
+                    @endforeach --}}
+                    
+                    
                     @if (Auth::check())
+                 
+                       
+                 
                     <li><a href="{{route('careers')}}">Lavora con noi</a></li>
                     @endif
                 </ul>

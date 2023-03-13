@@ -18,15 +18,14 @@
             <td class="">
                 @if(is_null($article->is_accepted))
 
-                <a href="{{route('article.show', compact('article'))}}" class="btn" id="mybottone4">Leggi articolo</a>
-                <a href="{{route('article.show', compact('article'))}}" id="myicon4"><i class="fa-regular fs-5 fa-pen-to-square"></i></a>
+                  <a href="{{route('article.show', compact('article'))}}" class="btn" id="mybottone4">Leggi articolo</a>
+                  <a href="{{route('article.show', compact('article'))}}" id="myicon4"><i class="fa-regular fs-5 fa-pen-to-square"></i></a>
                 @else 
-                <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn" id="mybottone3">Manda in revisione</a>
-
-                <a href="{{route('revisor.undoArticle', compact('article'))}}" id="myicon3"><i class="fa-regular fs-5 fa-share-from-square"></i></a>
+                  <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn" id="mybottone3">Manda in revisione</a>
+                  <a href="{{route('revisor.undoArticle', compact('article'))}}" id="myicon3"><i class="fa-regular fs-5 fa-share-from-square"></i></a>
                 @endif  
             </td>
-          </tr>
+        </tr>
         @endforeach
     </tbody>
-  </table>
+</table>

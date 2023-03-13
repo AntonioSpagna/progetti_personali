@@ -4,6 +4,7 @@
             <h1 class="text-center">Dashboard Revisore</h1>
         </div>
     </div> 
+
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -13,6 +14,7 @@
         </ul>
     </div>
     @endif
+    
     @if(session('message'))
     <div class="alert alert-success text-center">
         {{session('message')}}

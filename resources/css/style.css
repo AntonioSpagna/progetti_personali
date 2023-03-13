@@ -338,6 +338,11 @@ a{
 
 /* Ridimensionamento del bottone */
 @media only screen and (max-width: 993px) {
+  .border-none{
+    border: none;
+    background: none;
+  }
+
   #mybottone {
     display: none;
   }
@@ -403,6 +408,11 @@ a{
 
 }
 @media only screen and (min-width: 994px) {
+
+  .border-none{
+    display: none;
+  }
+
   #mybottone {
     display: inline-block;
   }

@@ -12,13 +12,13 @@
           <li class="nav-item">
             <a class="nav-link px-1 px-lg-3" href="{{route('article.index')}}">Articoli</a>
           </li>
-           <li class="nav-item dropdown px-1">
+          <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               @foreach ($categories as $category)
-                  <li class="dropdown-item"><a  href="{{route('article.byCategory' , ['category'=>$category->id])}}"><i class="{{$category->icon}} fs-5 pe-2"></i> {{$category->name}} </a></li>
+                <li class="dropdown-item"><a  href="{{route('article.byCategory' , ['category'=>$category->id])}}"><i class="{{$category->icon}} fs-5 pe-2"></i> {{$category->name}} </a></li>
               @endforeach  
             </ul>
           </li> 
@@ -34,7 +34,9 @@
               <li><a class="dropdown-item link-drop" href="{{route('login')}}">Login</a></li>
             </ul>
           </li>
+
           @else
+
           @if (Auth::user()->is_admin || Auth::user()->is_revisor)
           <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,22 +44,21 @@
             </a>
             <ul class="dropdown-menu menu-drop">
               @if (Auth::user()->is_admin)
-            <li class="nav-item">
-              <a class="dropdown-item link-drop" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
-            </li> 
-           @endif
-           @if (Auth::user()->is_revisor)
-            <li class="nav-item">
-              <a class="dropdown-item link-drop " href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
-            </li> 
-           @endif
+                <li class="nav-item">
+                  <a class="dropdown-item link-drop" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
+                </li> 
+              @endif
+              @if (Auth::user()->is_revisor)
+                <li class="nav-item">
+                  <a class="dropdown-item link-drop " href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
+                </li> 
+              @endif
             </ul>
           </li>
           @endif
           <li class="nav-item">
             <a class="nav-link px-1" href="{{route('careers')}}">Lavora con noi</a>
-          </li>  
-           
+          </li>           
           <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto {{Auth::user()->name}}
@@ -69,13 +70,11 @@
               </form>             
             </ul>
           </li>
-        </ul>
-    
-        
-            
-         
+        </ul>              
         <a class="btn mx-2 mx-md-4 button_Nav mb-3 mb-xl-0" href="{{route('article.create')}}">Crea articolo</a>
+
         @endguest
+
         <div id="myModal" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
@@ -84,21 +83,17 @@
               <button class="btn btn-outline-info" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
           </div>
-        </div>
-            
+        </div>            
              
-            @if (Auth::check())
-            <button id="myBtn" class="btn-search me-md-3" type="submit"><i class="fa-solid fa-magnifying-glass fs-4"></i></button> 
-            @else
-            <button id="myBtn" class="btn-search2 me-md-3" type="submit"><i class="fa-solid fa-magnifying-glass fs-4"></i></button>   
-             @endif
-          
-                
-
-            
+        @if (Auth::check())
+          <button id="myBtn" class="btn-search me-md-3" type="submit"><i class="fa-solid fa-magnifying-glass fs-4"></i></button> 
+        @else
+          <button id="myBtn" class="btn-search2 me-md-3" type="submit"><i class="fa-solid fa-magnifying-glass fs-4"></i></button>   
+        @endif  
+                            
       </div>
     </div>
-  </nav>    
+</nav>    
  
 
   
