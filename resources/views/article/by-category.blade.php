@@ -37,7 +37,7 @@
                 <div class="row ">
                     {{-- colonna sinitra --}}
                     <div class="col-6 p-0 bordo-dx rowclsx">
-                        <img src="{{Storage::url($article->img)}}" class="w-100 imgvclsx-category " alt="">
+                        <img src="{{Storage::url($article->img)}}" class="w-100 imgvclsx " alt="">
                     </div>
                     {{-- colonna destra --}}
                     <div class="col-6 ps-5 ">
@@ -50,19 +50,14 @@
                            
                         </div>
                         <h2 class="pt-3">{{substr($article->title, 0, 50)}}...</h2>
-                        <h6 class="pb-3">{{substr($article->subtitle, 0, 65)}}...</h6>
-                        <p class="small fst-italic text-capitalize">
-                            @foreach ($article->tags as $tag)
-                               # {{$tag->name}} 
-                            @endforeach
-                        </p>
+                        <h6 class="pb-3">{{substr($article->subtitle, 0, 65)}}...</h6>                        
                         <p>
                             {{subStr($article->body, 0, 50)}}...
                         </p>
                         <div>
                             Redatto il: {{$article->created_at->format('d/m/Y')}} da <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}">{{$article->user->name}}</a>
                         </div>
-                        <a href="{{route('article.show', compact('article'))}}" class="pt-3 fs-5" type="submit">Leggi adesso<span><i class="fa-solid arrow ps-3 fa-arrow-right-long"></i></span></a>
+                        <a href="{{route('article.show', compact('article'))}}" class="pt-4 fs-5" type="submit">Leggi adesso<span><i class="fa-solid arrow ps-3 fa-arrow-right-long"></i></span></a>
                     </div>
                 </div> 
             </div>
@@ -74,7 +69,7 @@
     <div id="card-a" class="container zoom my-5 bordo vh-50">
         <div class="row">
             <div class="col-12 col-md-12 col-lg-12">
-                <div class="row">
+                <div class="row flex-column-reverse flex-md-row">
                     {{-- colonna sinitra --}}
                     <div class="col-6 ps-5 ">
                         <div class="pt-3 ">

@@ -51,4 +51,40 @@ window.onclick = function(event) {
 }
 
 
+// animazione immagine show
+window.addEventListener('load', function(){
+
+  let imgCounter= 0;
+  let titleCounter= 0;
+
+  let imgAnimation = document.querySelector('#imgAnimation');
+  let observerImg = new IntersectionObserver((entries) => {
+    entries.forEach(entry =>{
+     if(entry.isIntersecting && imgCounter==0) {
+        imgAnimation.classList.add('fadeRight');
+        imgCounter=1;
+     }else{
+          imgAnimation.classList.remove('fadeRight');
+        }
+    });
+  });
+
+  observerImg.observe(imgAnimation);
+
+  let titleAnimation = document.querySelector('#titleAnimation');
+  let observertitle = new IntersectionObserver((entries) => {
+      entries.forEach(entry =>{
+      if(entry.isIntersecting && titleCounter==0) {
+          titleAnimation.classList.add('fadeLeft');
+          titleCounter=1;
+      }else{
+            titleAnimation.classList.remove('fadeLeft');
+        }
+    });
+  });
+
+  observertitle.observe(titleAnimation);
+})
+
+
 

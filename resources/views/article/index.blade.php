@@ -63,7 +63,7 @@
     <div id="card-a" class="container zoom my-5 bordo vh-50">
         <div class="row">
             <div class="col-12 col-md-12 col-lg-12">
-                <div class="row">
+                <div class="row flex-column-reverse flex-md-row">
                     {{-- colonna sinitra --}}
                     <div class="col-6 ps-5 ">
                         <div class="pt-3">
