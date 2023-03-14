@@ -53,6 +53,11 @@
                   <a class="dropdown-item link-drop " href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
                 </li> 
               @endif
+              @if (Auth::user()->is_writer)
+                <li class="nav-item">
+                  <a class="dropdown-item link-drop " href="{{route('writer.dashboard')}}">Dashboard Redattore</a>
+                </li> 
+              @endif
             </ul>
           </li>
           @endif

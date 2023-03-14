@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
-use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -96,15 +97,50 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('article.edit', compact('article'));
     }
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Article $article)
-    {
-        //
+    {   
+        $request->validate([
+            'title'=>'required|min:5|unique:articles,title,' . $article->id,
+            'subtitle'=>'required|min:5|unique:articles,subtitle,' . $article->id,
+            'body'=>'required|min:20',
+            'img'=>'img',
+            'category'=>'required',
+            'tags'=>'required',
+        ]);
+
+        $article->update([
+            'title'=>$request->title,
+            'subtitle'=>$request->subtitle,
+            'body'=>$request->body,
+            'category_id'=>$request->category,
+        ]);
+
+        if ($request->img) {
+            Storage::delete($article->img);
+            $article->update([
+                'img'=>$request->file('img')->store('public/img')
+            ]);
+        }
+
+        $tags = explode(', ', $request->tags);
+        $newTags = [];
+
+        foreach ($tags as $tag) {
+            $newTag = Tag::updateOrCreate([
+                'name' => $tag,
+            ]);
+            $newTags[] = $newTag->id;
+        }
+
+        $article->tags()->sync($newTags);
+
+        return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\'articolo scelto');
     }
 
     /**
@@ -112,7 +148,13 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        foreach ($article->tags as $tag) {
+            $article->tags()->detach($tag);
+        }
+
+        $article->delete();
+
+        return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente cancellato l\'articolo scelto');
     }
 
     public function articleSearch(Request $request){

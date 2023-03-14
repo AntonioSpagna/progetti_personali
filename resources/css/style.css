@@ -134,7 +134,7 @@ a{
 .btn-accept{
   display: inline-block;
   width: 214px;
-  padding: 14px 24px;
+  padding: 12px 24px;
   margin-left: 0;
   font-size: 16px;
   border: none;
@@ -156,7 +156,7 @@ a{
 /* BTN Rifiuta articolo */
 .btn-discard{
   display: inline-block;
-  padding: 14px 24px;
+  padding: 12px 24px;
   margin-left: 0;
   font-size: 16px;
   border: none;
@@ -332,6 +332,10 @@ a{
   padding: 0.5rem 0.5rem;
 }
 
+.btn-bg-none{
+  background: none;
+  border: 0;
+}
 
 
 
@@ -403,7 +407,7 @@ a{
   }
 
   .table > :not(caption) > * > * {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.1rem;
   }
 
 }
