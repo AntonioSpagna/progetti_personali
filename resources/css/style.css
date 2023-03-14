@@ -156,7 +156,7 @@ a{
 /* BTN Rifiuta articolo */
 .btn-discard{
   display: inline-block;
-  padding: 12px 24px;
+  padding: 14px 24px;
   margin-left: 0;
   font-size: 16px;
   border: none;
@@ -219,6 +219,8 @@ a{
     position: relative;
     border-right: none;
     flex-wrap:wrap;
+    font-size:16px;
+    padding: 0 10px;
   
   }
   

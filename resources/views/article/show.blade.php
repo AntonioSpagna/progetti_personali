@@ -45,15 +45,15 @@
             {{-- row data --}}
             <div class="row mt-3  border-show  ">   
                 <div class="col-12 col-md-12  d-flex justify-content-between align-items-center story__toolbar">
-                   <p>
+                   <p class="story__toolbar fw-bold">
                     <i class="fa-solid fa-calendar-days pe-1 pt-3"></i> 
                     {{$article->created_at->format('d/m/Y')}}
                    </p>
                      
                      <span  class="lettura">
-                        <a class="text-dark color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}"><i class="fa-solid fa-pen-nib pe-1 fs-5"></i>{{$article->user->name}}</a> 
+                        <a class="text-dark fw-bold story__toolbar color-hv" href="{{route('article.byUser' , ['user'=>$article->user->id])}}"><i class="fa-solid fa-pen-nib pe-1 fs-5"></i>{{$article->user->name}}</a> 
                      </span>
-                        <p>
+                        <p class="story__toolbar fw-bold">
                             <i class="fa-solid pe-1 pt-3 fa-hourglass-half"></i>
                             1 minuto di lettura
                         </p>

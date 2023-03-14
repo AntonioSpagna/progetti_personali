@@ -6,7 +6,7 @@
         <th class="hidden-col" scope="col">Sottotitolo</th>
         <th class="hidden-col" scope="col">Categoria</th>
         <th class="hidden-col" scope="col">Tags</th>
-        <th scope="col">Creato il</th>
+        <th class="hidden-col" scope="col">Creato il</th>
         <th scope="col">Azioni</th>
       </tr>
     </thead>
@@ -22,7 +22,7 @@
                     {{$tag->name}},
                 @endforeach 
             </td>
-            <td>{{$article->created_at->format('d/m/Y')}}</td>
+            <td class="hidden-col">{{$article->created_at->format('d/m/Y')}}</td>
             <td>
                 <a href="{{route('article.show', compact('article'))}}"><i class="fa-solid fa-book-open fs-4 "></i></a>
                 <a href="{{route('article.edit', compact('article'))}}"><i class="fa-regular fa-pen-to-square fs-4 px-2"></i></a>
