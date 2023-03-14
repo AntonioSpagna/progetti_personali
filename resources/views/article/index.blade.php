@@ -6,7 +6,7 @@
     @endif
     <div class="container-fluid p-5 text-center text-dark">
         <div class="row justify-content-center">
-            <h1 class=" text-dark">
+            <h1 class="text-dark">
                 Tutti gli articoli
             </h1>
         </div>

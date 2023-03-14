@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Tag;
 use App\Models\User;
 use App\Models\Article;
@@ -73,7 +74,9 @@ class ArticleController extends Controller
             'img'=>$request->has('img') ? $request->file('img')->store('public/article') : '/img/default.jpg',
             'category_id'=>$request->category,
             'user_id'=>Auth::user()->id,
+            // 'slug' => Str::slug($request->title),
         ]);
+
         $tags = explode(',', $request->tags);
         foreach ($tags as $tag) {
            $newTag = Tag::updateOrCreate([
@@ -119,6 +122,7 @@ class ArticleController extends Controller
             'subtitle'=>$request->subtitle,
             'body'=>$request->body,
             'category_id'=>$request->category,
+            // 'slug' => Str::slug($request->title),
         ]);
 
         if ($request->img) {
