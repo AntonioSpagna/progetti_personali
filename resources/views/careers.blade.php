@@ -42,19 +42,21 @@
     
     
     @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
     @endif
+
     @if(session('message'))
-    <div class="alert alert-success text-center">
-        {{session('message')}}
-    </div>
+        <div class="alert alert-success text-center">
+            {{session('message')}}
+        </div>
     @endif
+    
     <h2 class="text-center margin-titolo fs-1">Compila il form per candidarti</h2>
     {{-- sezione invia candidatura --}}
     <div class="container create-article">
