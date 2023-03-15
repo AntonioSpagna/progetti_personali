@@ -37,7 +37,7 @@
 
           @else
 
-          @if (Auth::user()->is_admin || Auth::user()->is_revisor)
+          @if (Auth::user()->is_admin || Auth::user()->is_revisor || Auth::user()->is_writer)
           <li class="nav-item dropdown px-1">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Dashboards
