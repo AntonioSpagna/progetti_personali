@@ -112,7 +112,7 @@ class ArticleController extends Controller
             'title'=>'required|min:5|unique:articles,title,' . $article->id,
             'subtitle'=>'required|min:5|unique:articles,subtitle,' . $article->id,
             'body'=>'required|min:20',
-            'img'=>'img',
+            'img'=>'image',
             'category'=>'required',
             'tags'=>'required',
         ]);
