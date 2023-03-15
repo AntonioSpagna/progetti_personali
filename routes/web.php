@@ -22,7 +22,7 @@ Route::get('/', [PublicController::class,'home'])->name('homepage');
 
 
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
-Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/article/{article:slug}/show', [ArticleController::class, 'show'])->name('article.show');
 // rotta per categoria di articoli
 Route::get('/article/category/{category}' , [ArticleController::class , 'byCategory'] )->name('article.byCategory'); 
 //rotta per scrittore di articoli
