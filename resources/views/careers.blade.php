@@ -5,7 +5,7 @@
         <div class="row flex-column-reverse flex-md-row justify-content-evenly align-items-center">
             <div class="col-10 col-md-5 card-careers py-2 px-4">
                 <h2>Lavora come amministratore</h2>
-                <p class="text-dark">Cosa farai: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fuga laudantium numquam dicta impedit sequi? Impedit, quas eaque eius, non alias facere molestias assumenda temporibus exercitationem ipsam aliquam nemo commodi?</p>    
+                <p class="text-dark">Cosa farai: Ti occuperai della gestione delle richieste di lavoro, avrai la piena gestione dei tags e delle categorie presenti in piattaforma</p>    
             </div>
             {{-- img amministratore --}}
             <div class="col-12 d-flex justify-content-center col-md-5">
@@ -23,7 +23,7 @@
             
             <div class="col-10 col-md-5 card-careers py-2 px-4">
                 <h2>Lavora come Revisore </h2>
-                <p class="text-dark">Cosa farai: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fuga laudantium numquam dicta impedit sequi? Impedit, quas eaque eius, non alias facere molestias assumenda temporibus exercitationem ipsam aliquam nemo commodi?</p>  
+                <p class="text-dark">Cosa farai: Ti occuperai della revisione degli articoli dei vari redattori, con la possibilità di accettare, rifiutare o mandare in revisione un articolo</p>  
             </div>
         </div>
         
@@ -31,7 +31,7 @@
         <div class="row flex-column-reverse flex-md-row justify-content-evenly align-items-center">
             <div class="col-10 col-md-5 card-careers py-2 px-4">
                 <h2>Lavora come redattore</h2>
-                <p class="text-dark">Cosa farai: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fuga laudantium numquam dicta impedit sequi? Impedit, quas eaque eius, non alias facere molestias assumenda temporibus exercitationem ipsam aliquam nemo commodi?</p>
+                <p class="text-dark">Cosa farai: Ti occuperai della creazione dei vari articoli e potrai modificarli ed eliminarli</p>
             </div>
             {{-- img redattore --}}
             <div class="col-12 d-flex justify-content-center col-md-5">

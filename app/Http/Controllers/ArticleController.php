@@ -148,7 +148,7 @@ class ArticleController extends Controller
 
 
 
-        return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\'articolo scelto');
+        return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\'articolo scelto ed è in fase di revisione');
     }
 
     /**
