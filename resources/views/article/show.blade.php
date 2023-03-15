@@ -55,7 +55,7 @@
                      </span>
                         <p class="story__toolbar fw-bold">
                             <i class="fa-solid pe-1 pt-3 fa-hourglass-half"></i>
-                            1 minuto di lettura
+                            {{$article->readDuration()}} min
                         </p>
                 </div>                      
             </div>
@@ -88,4 +88,4 @@
 
 
     
- {{-- <div id="progress-bar"></div>    --}}
+ <div id="progress-bar"></div>    
